@@ -1,0 +1,46 @@
+{
+  "name": "india-import-preflight-agent",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.10.0",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3210",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3210",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:extraction": "vitest run tests/extraction tests/contracts/extraction-privacy.test.ts",
+    "test:live-extraction": "RUN_LIVE_OPENAI_EXTRACTION=1 vitest run tests/extraction/live-openai.test.ts",
+    "test:contracts": "vitest run tests/contracts",
+    "test:browser": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "record:demo": "node scripts/record-demo.mjs",
+    "verify:links": "node scripts/verify-official-links.mjs",
+    "verify:privacy": "node scripts/verify-privacy.mjs",
+    "verify:security": "pnpm audit --prod --audit-level high",
+    "verify:video": "node scripts/verify-demo-video.mjs"
+  },
+  "dependencies": {
+    "@openai/agents": "^0.17.0",
+    "decimal.js": "^10.6.0",
+    "next": "16.3.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.3.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

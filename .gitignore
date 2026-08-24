@@ -1,0 +1,13 @@
+.DS_Store
+.demo-recording/
+.docx_work/
+.env*
+!.env.example
+.impeccable/
+.next/
+.pnpm-store/
+.vercel/
+node_modules/
+playwright-report/
+test-results/
+tsconfig.tsbuildinfo
