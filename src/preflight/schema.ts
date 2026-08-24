@@ -44,6 +44,11 @@ export const AssessmentRequestSchema = z.object({
     producerIdentity: z.string().min(1).nullable(),
     exporterIdentity: z.string().min(1).nullable(),
   }),
+  shipment: z.object({
+    quantity: UniversalFactSchema,
+    incoterm: UniversalFactSchema,
+    destination: UniversalFactSchema,
+  }).strict().optional(),
   tradeRemedyCheck: z.enum(["confirmed_no_match", "unknown", "possible_match"]),
   evidence: z.record(z.string(), EvidenceStatusSchema),
   costInputs: z.object({

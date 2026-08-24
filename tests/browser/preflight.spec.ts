@@ -8,6 +8,12 @@ const routerPdfFixture = fileURLToPath(
 
 type JourneyOutcome = "Ready within checked scope" | "Blocked" | "Needs verification";
 
+const preparationHeading: Record<JourneyOutcome, string> = {
+  "Ready within checked scope": "Your documents look complete",
+  Blocked: "Fix these issues before importing",
+  "Needs verification": "We need a few more details",
+};
+
 const products = [
   {
     name: "Wi-Fi router",
@@ -37,21 +43,104 @@ const products = [
   },
 ] as const;
 
+test("the public journey starts with intake and returns an import action plan", async ({ page }, testInfo) => {
+  await page.goto("/");
+
+  await expect(
+    page.getByRole("heading", { name: "Get the right documents and next steps for your import." }),
+  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Tell us what you're importing" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Build my import plan" })).toBeVisible();
+
+  const evidenceReview = page.getByRole("group", { name: "I already have documents to verify" });
+  await expect(evidenceReview).not.toHaveAttribute("open", "");
+
+  if (process.env.BWMI_PLAN_VISUAL_CAPTURE === "1") {
+    await page.screenshot({
+      path: `/private/tmp/bwmi-import-intake-${testInfo.project.name}.png`,
+    });
+  }
+
+  await page.getByLabel("Country of origin").fill("VN");
+  await page.getByLabel("Destination port or city").fill("Nhava Sheva, Maharashtra");
+  await page.getByLabel("Shipment quantity").fill("250 units");
+  await page.getByLabel("Item value (INR)").fill("99999.98");
+  await page.getByLabel("Freight (INR)").fill("0.01");
+  await page.getByLabel("Insurance (INR)").fill("0.01");
+  await page.getByRole("button", { name: "Build my import plan" }).click();
+
+  const result = page.getByRole("region", { name: "Import action plan", exact: true });
+  await expect(result.getByRole("heading", { name: "Your step-by-step import plan" })).toBeVisible();
+  await expect(result.getByText("We need a few more details", { exact: true })).toBeVisible();
+  await expect(result.getByText("Indian Customs product code", { exact: true })).toBeVisible();
+  await expect(result.getByText("Waiting for exact product details", { exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Your checklist" })).toBeVisible();
+  const checklistOrder = await page.evaluate(() => {
+    const checklist = document.getElementById("findings-title");
+    const classification = document.getElementById("classification-title");
+    return Boolean(
+      checklist &&
+      classification &&
+      checklist.compareDocumentPosition(classification) & Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+  });
+  expect(checklistOrder).toBe(true);
+  await expect(result).not.toContainText(/ready for shipping/i);
+
+  if (process.env.BWMI_PLAN_VISUAL_CAPTURE === "1") {
+    await result.scrollIntoViewIfNeeded();
+    await page.screenshot({
+      path: `/private/tmp/bwmi-import-plan-${testInfo.project.name}.png`,
+    });
+  }
+});
+
+test("the action plan explains tasks in first-importer language", async ({ page }) => {
+  await page.goto("/");
+  await page.getByLabel("Country of origin").fill("VN");
+  await page.getByLabel("Destination port or city").fill("Nhava Sheva, Maharashtra");
+  await page.getByLabel("Shipment quantity").fill("250 units");
+  await page.getByLabel("Item value (INR)").fill("99999.98");
+  await page.getByLabel("Freight (INR)").fill("0.01");
+  await page.getByLabel("Insurance (INR)").fill("0.01");
+  await page.getByRole("button", { name: "Build my import plan" }).click();
+
+  const result = page.getByRole("region", { name: "Import action plan", exact: true });
+  await expect(result.getByText("We need a few more details", { exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Your checklist" })).toBeVisible();
+  await expect(result.getByText(/^Step 1/)).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Confirm the exact product details" })).toBeVisible();
+  await expect(result.getByText("What you need", { exact: true }).first()).toBeVisible();
+  await expect(result.getByText("Who to ask", { exact: true }).first()).toBeVisible();
+  await expect(
+    result.getByText("Your overseas supplier or the product manufacturer", { exact: true }),
+  ).toBeVisible();
+  await expect(result.getByText("Next step", { exact: true }).first()).toBeVisible();
+  await expect(
+    result.getByText("Why this is needed and official source", { exact: true }).first(),
+  ).toBeVisible();
+  await expect(result).not.toContainText(
+    /adapterModelIdentity|manufacturerIdentity|modelIdentity|evidence gates|checked-scope result|ordered remediation|action 0|pinpoint|review window/i,
+  );
+});
+
 async function completeJourney(page: Page, product: (typeof products)[number], outcome: JourneyOutcome) {
   await page.goto("/");
   await expect(page.getByText("Restricted promotion harness")).toHaveCount(0);
   await page.getByRole("radio", { name: product.name }).check();
+  await page.getByText("Add known product details or a pro-forma invoice", { exact: true }).click();
   await page.getByLabel("Product scope").selectOption("matches_exact_scope");
-  await page.getByLabel("Exact model", { exact: true }).fill(product.model);
-  await page.getByLabel("Manufacturer", { exact: true }).fill(product.manufacturer);
+  await page.getByLabel(/^Exact model/).fill(product.model);
+  await page.getByLabel(/^Manufacturer/).fill(product.manufacturer);
   for (const [label, value] of product.extraFields) {
     await page.getByLabel(label, { exact: true }).fill(value);
   }
 
   await page.getByLabel("Country of origin").fill(outcome === "Needs verification" ? "" : "VN");
   await page.getByLabel("Indian importer").fill("BWMI importer India Pvt Ltd");
-  await page.getByLabel("Producer", { exact: true }).fill("BWMI producer");
+  await page.getByLabel(/^Producer/).fill("BWMI producer");
   await page.getByLabel("Exporter").fill("BWMI exporter");
+  await page.getByText("I already have documents to verify", { exact: true }).click();
   await page
     .getByLabel("Dated trade-remedy check")
     .selectOption(outcome === "Needs verification" ? "unknown" : "confirmed_no_match");
@@ -68,28 +157,27 @@ async function completeJourney(page: Page, product: (typeof products)[number], o
     await page.locator('[data-rule-id*="wpc_eta"]').selectOption("absent");
   }
 
-  await page.getByRole("button", { name: "Run preflight" }).click();
-  const result = page.getByRole("region", { name: "Preflight result" });
-  await expect(result.getByRole("heading", { name: outcome })).toBeVisible();
-  await expect(result.getByText("HS code", { exact: false })).toBeVisible();
-  await expect(result.getByText("Source checked", { exact: false }).first()).toBeVisible();
+  await page.getByRole("button", { name: "Build my import plan" }).click();
+  const result = page.getByRole("region", { name: "Import action plan", exact: true });
+  await expect(result.getByRole("heading", { name: "Your step-by-step import plan" })).toBeVisible();
+  await expect(result.getByText(preparationHeading[outcome], { exact: true })).toBeVisible();
+  await expect(result.getByText("Indian Customs product code", { exact: true })).toBeVisible();
+  await result.getByText("Why this is needed and official source", { exact: true }).first().click();
+  await expect(result.getByText("Official source", { exact: true }).first()).toBeVisible();
   await expect(
-    result.getByText(/Source checked 2026-08-24; review again by 2026-\d{2}-\d{2}/).first(),
+    result.getByText(/Checked 2026-08-24; check again after 2026-\d{2}-\d{2}/).first(),
   ).toBeVisible();
 
   if (outcome === "Needs verification") {
-    await expect(result.getByText("Numeric cost withheld", { exact: false })).toBeVisible();
-    await expect(result.getByRole("button", { name: "Update facts and rerun" })).toBeVisible();
+    await expect(result.getByText("Estimate not available yet", { exact: false })).toBeVisible();
+    await expect(result.getByRole("button", { name: "Update details and rebuild plan" })).toBeVisible();
   } else {
     await expect(result.getByText("₹43,960.00", { exact: true }).first()).toBeVisible();
     await expect(result.getByText("item value + freight + insurance", { exact: false })).toBeVisible();
   }
   if (outcome === "Blocked") {
-    await expect(result.getByText("Customs-clearance blocker", { exact: true })).toBeVisible();
-    await expect(result.getByRole("link", { name: /WPC|Equipment Type Approval/i }).first()).toHaveAttribute(
-      "href",
-      /^https:\/\//,
-    );
+    await expect(result.getByText(/Required before Customs clearance/).first()).toBeVisible();
+    await expect(result.getByRole("link").first()).toHaveAttribute("href", /^https:\/\//);
   }
 }
 
@@ -153,7 +241,7 @@ test("public journey is keyboard-usable, exposes three admitted choices plus Oth
   await page.keyboard.press("Tab");
   await expect(page.getByRole("link", { name: "Skip to assessment" })).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(page.getByRole("heading", { name: "Describe the exact shipment" })).toBeFocused();
+  await expect(page.getByRole("heading", { name: "Tell us what you're importing" })).toBeFocused();
 
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
@@ -175,24 +263,30 @@ test("the Ready journey completes using only the keyboard and keeps release secu
   const skipLink = page.getByRole("link", { name: "Skip to assessment" });
   await expect(skipLink).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(page.getByRole("heading", { name: "Describe the exact shipment" })).toBeFocused();
+  await expect(page.getByRole("heading", { name: "Tell us what you're importing" })).toBeFocused();
 
   const router = page.getByRole("radio", { name: "Wi-Fi router" });
   await tabTo(page, router);
   await page.keyboard.press("Space");
+  const productDetails = page.getByText("Add known product details or a pro-forma invoice", { exact: true });
+  await tabTo(page, productDetails);
+  await page.keyboard.press("Enter");
   await chooseOptionWithKeyboard(
     page,
     page.getByLabel("Product scope"),
     "This exact scope matches",
     "matches_exact_scope",
   );
-  await typeWithKeyboard(page, page.getByLabel("Exact model", { exact: true }), "BWMI-MIMO-245-R1");
-  await typeWithKeyboard(page, page.getByLabel("Manufacturer", { exact: true }), "Synthetic router manufacturer");
+  await typeWithKeyboard(page, page.getByLabel(/^Exact model/), "BWMI-MIMO-245-R1");
+  await typeWithKeyboard(page, page.getByLabel(/^Manufacturer/), "Synthetic router manufacturer");
   await typeWithKeyboard(page, page.getByLabel("Adapter model", { exact: true }), "BWMI-ADAPTER-12V-R1");
   await typeWithKeyboard(page, page.getByLabel("Country of origin"), "VN");
   await typeWithKeyboard(page, page.getByLabel("Indian importer"), "Synthetic importer India Pvt Ltd");
-  await typeWithKeyboard(page, page.getByLabel("Producer", { exact: true }), "Synthetic producer");
+  await typeWithKeyboard(page, page.getByLabel(/^Producer/), "Synthetic producer");
   await typeWithKeyboard(page, page.getByLabel("Exporter"), "Synthetic exporter");
+  const evidenceReview = page.getByText("I already have documents to verify", { exact: true });
+  await tabTo(page, evidenceReview);
+  await page.keyboard.press("Enter");
   await chooseOptionWithKeyboard(
     page,
     page.getByLabel("Dated trade-remedy check"),
@@ -213,15 +307,18 @@ test("the Ready journey completes using only the keyboard and keeps release secu
   await typeWithKeyboard(page, page.getByLabel("Item value (INR)"), "99999.98");
   await typeWithKeyboard(page, page.getByLabel("Freight (INR)"), "0.01");
   await typeWithKeyboard(page, page.getByLabel("Insurance (INR)"), "0.01");
-  const runPreflight = page.getByRole("button", { name: "Run preflight" });
+  const runPreflight = page.getByRole("button", { name: "Build my import plan" });
   await tabTo(page, runPreflight);
   await page.keyboard.press("Enter");
 
-  const outcome = page.getByRole("heading", { name: "Ready within checked scope" });
+  const outcome = page.getByRole("heading", { name: "Your step-by-step import plan" });
   await expect(outcome).toBeVisible();
   await expect(outcome).toBeFocused();
   await expect(page.getByText("₹43,960.00", { exact: true }).first()).toBeVisible();
-  await expect(page.getByText(/Source checked 2026-08-24; review again by/).first()).toBeVisible();
+  const sourceDetails = page.getByText("Why this is needed and official source", { exact: true }).first();
+  await tabTo(page, sourceDetails);
+  await page.keyboard.press("Enter");
+  await expect(page.getByText(/Checked 2026-08-24; check again after/).first()).toBeVisible();
 
   const accessibility = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
@@ -243,37 +340,39 @@ test("Other product preserves universal facts and renders a fail-closed Customs 
   await page.goto("/");
   await page.getByRole("radio", { name: "Other product" }).check();
 
-  await expect(page.getByText("Outside the supported catalog", { exact: false }).first()).toBeVisible();
+  await expect(page.getByText("Not listed here · needs expert review", { exact: true })).toBeVisible();
   await expect(page.getByLabel("Product scope")).toHaveCount(0);
   await expect(page.getByLabel("Dated trade-remedy check")).toHaveCount(0);
   await expect(page.locator("[data-evidence-rule]")).toHaveCount(0);
   await expect(page.getByLabel("Synthetic router pro-forma invoice PDF")).toHaveCount(0);
 
   await page.getByLabel("Product description").fill("Outdoor solar-powered inventory tracker");
-  await page.getByLabel("Exact model", { exact: true }).fill("TRACK-OUTDOOR-01");
-  await page.getByLabel("Manufacturer", { exact: true }).fill("Example device manufacturer");
+  await page.getByLabel(/^Exact model/).fill("TRACK-OUTDOOR-01");
+  await page.getByLabel(/^Manufacturer/).fill("Example device manufacturer");
   await page.getByLabel("Overseas supplier").fill("Example overseas supplier");
   await page.getByLabel("Country of origin").fill("VN");
   await page.getByLabel("Indian importer").fill("Example importer India Pvt Ltd");
-  await page.getByLabel("Producer", { exact: true }).fill("Example device producer");
+  await page.getByLabel(/^Producer/).fill("Example device producer");
   await page.getByLabel("Exporter").fill("Example exporter");
   await page.getByLabel("Shipment quantity").fill("250 units");
   await page.getByLabel("Incoterm").fill("CIF Mumbai");
-  await page.getByLabel("Destination").fill("Nhava Sheva, Maharashtra");
+  await page.getByLabel("Destination port or city").fill("Nhava Sheva, Maharashtra");
   await page.getByLabel("Item value (INR)").fill("99999.98");
   await page.getByLabel("Freight (INR)").fill("0.01");
   await page.getByLabel("Insurance (INR)").fill("0.01");
 
-  await page.getByRole("button", { name: "Run preflight" }).click();
+  await page.getByRole("button", { name: "Build my import plan" }).click();
 
-  const result = page.getByRole("region", { name: "Preflight result" });
-  await expect(result.getByRole("heading", { name: "Needs verification" })).toBeVisible();
+  const result = page.getByRole("region", { name: "Import action plan", exact: true });
+  await expect(result.getByRole("heading", { name: "Your broker handoff plan" })).toBeVisible();
+  await expect(result.getByText("Professional review required", { exact: true })).toBeVisible();
   await expect(result.getByText("Classification withheld", { exact: true })).toBeVisible();
   await expect(result.getByText("Numeric cost withheld", { exact: true })).toBeVisible();
-  await expect(result.getByRole("heading", { name: "Supported checks", exact: true })).toBeVisible();
-  await expect(result.getByRole("heading", { name: "Unsupported checks", exact: true })).toBeVisible();
-  await expect(result.getByRole("heading", { name: "Unresolved facts", exact: true })).toBeVisible();
-  await expect(result.getByRole("heading", { name: "Professional review needed", exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Facts already prepared", exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Questions for your Customs Broker", exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Information still needed", exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "Why professional review is needed", exact: true })).toBeVisible();
+  await expect(result.getByRole("heading", { name: "What to do next", exact: true })).toBeVisible();
   await expect(result.getByRole("heading", { name: "Customs Broker summary", exact: true })).toBeVisible();
   await expect(result.getByText("Outdoor solar-powered inventory tracker", { exact: true })).toBeVisible();
   await expect(result.getByText("CIF Mumbai", { exact: true })).toBeVisible();
@@ -301,10 +400,12 @@ test("one confirmed synthetic router invoice feeds the shared deterministic engi
   await page.goto("/");
 
   await page.getByRole("radio", { name: "Bluetooth headphones" }).check();
+  await page.getByText("Add known product details or a pro-forma invoice", { exact: true }).click();
   await expect(page.getByText(/PDF extraction is verified only for the synthetic router invoice/i)).toBeVisible();
   await expect(page.getByLabel("Synthetic router pro-forma invoice PDF")).toHaveCount(0);
 
   await page.getByRole("radio", { name: "Wi-Fi router" }).check();
+  await page.getByText("Add known product details or a pro-forma invoice", { exact: true }).click();
   const upload = page.getByLabel("Synthetic router pro-forma invoice PDF");
   await upload.setInputFiles({
     name: "router.png",
@@ -326,7 +427,7 @@ test("one confirmed synthetic router invoice feeds the shared deterministic engi
     });
   }
 
-  await page.getByRole("button", { name: "Run preflight" }).click();
+  await page.getByRole("button", { name: "Build my import plan" }).click();
   await expect(page.getByText(/confirm and use every extracted fact/i)).toBeVisible();
 
   const manufacturerConfirmation = review.getByRole("checkbox", { name: "Confirm Manufacturer" });
@@ -341,22 +442,23 @@ test("one confirmed synthetic router invoice feeds the shared deterministic engi
   }
   await review.getByRole("button", { name: "Use 13 confirmed facts" }).click();
 
-  await expect(page.getByLabel("Exact model", { exact: true })).toHaveValue("BWMI-MIMO-245-R1");
-  await expect(page.getByLabel("Manufacturer", { exact: true })).toHaveValue("Reviewed fixture manufacturer");
+  await expect(page.getByLabel(/^Exact model/)).toHaveValue("BWMI-MIMO-245-R1");
+  await expect(page.getByLabel(/^Manufacturer/)).toHaveValue("Reviewed fixture manufacturer");
   await expect(page.getByLabel("Adapter model", { exact: true })).toHaveValue("BWMI-ADAPTER-12V-R1");
   await expect(page.getByLabel("Country of origin", { exact: true })).toHaveValue("VN");
   await expect(page.getByLabel("Item value (INR)")).toHaveValue("99999.98");
 
   await page.getByLabel("Product scope").selectOption("matches_exact_scope");
+  await page.getByText("I already have documents to verify", { exact: true }).click();
   await page.getByLabel("Dated trade-remedy check").selectOption("confirmed_no_match");
   const evidenceControls = page.locator("[data-evidence-rule]");
   for (let index = 0; index < (await evidenceControls.count()); index += 1) {
     await evidenceControls.nth(index).selectOption("present");
   }
 
-  await page.getByRole("button", { name: "Run preflight" }).click();
-  const result = page.getByRole("region", { name: "Preflight result" });
-  await expect(result.getByRole("heading", { name: "Ready within checked scope" })).toBeVisible();
+  await page.getByRole("button", { name: "Build my import plan" }).click();
+  const result = page.getByRole("region", { name: "Import action plan", exact: true });
+  await expect(result.getByRole("heading", { name: "Your step-by-step import plan" })).toBeVisible();
   await expect(result.getByText("₹43,960.00", { exact: true }).first()).toBeVisible();
 
   const accessibility = await new AxeBuilder({ page })

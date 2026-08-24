@@ -22,10 +22,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   background: var(--canvas);
@@ -151,10 +147,10 @@ main {
 .intro h1 {
   max-width: 880px;
   margin: 0;
-  font-size: clamp(2.6rem, 6.2vw, 6.7rem);
+  font-size: clamp(2.6rem, 5.6vw, 5rem);
   font-weight: 650;
-  letter-spacing: -0.055em;
-  line-height: 0.96;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
 }
 
 .intro-copy {
@@ -304,15 +300,11 @@ legend {
   padding: 0.9rem 1rem;
   border: 1px solid var(--line);
   background: var(--paper);
-  transition: border-color 160ms ease, background-color 160ms ease, transform 120ms ease;
+  transition: border-color 160ms ease, background-color 160ms ease;
 }
 
 .product-option:hover {
   border-color: var(--accent);
-}
-
-.product-option:active {
-  transform: translateY(1px);
 }
 
 .product-option.selected {
@@ -560,6 +552,28 @@ details ul {
   gap: 1rem;
 }
 
+.product-detail-review {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.product-detail-review > summary {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  padding: 0.65rem 0;
+}
+
+.product-detail-body {
+  padding-bottom: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.product-detail-body .scope-band {
+  margin-top: 1.25rem;
+}
+
 .field {
   display: grid;
   align-content: start;
@@ -574,6 +588,12 @@ details ul {
   color: var(--ink);
   font-size: 0.86rem;
   font-weight: 680;
+}
+
+.field > span small {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 520;
 }
 
 .field small,
@@ -604,6 +624,37 @@ select:hover {
   margin-top: 2.25rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line-strong);
+}
+
+.evidence-review {
+  margin-top: 2.25rem;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.evidence-review > summary {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+}
+
+.evidence-review > summary::after {
+  content: "Optional";
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 560;
+}
+
+.evidence-review .form-section {
+  margin-top: 0;
+  padding: 1.25rem 0 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.trade-remedy-field {
+  margin-bottom: 1.25rem;
 }
 
 .form-section > p {
@@ -668,11 +719,7 @@ button {
   cursor: pointer;
   border-radius: 0;
   font-weight: 720;
-  transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease;
-}
-
-button:active {
-  transform: translateY(1px);
+  transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 button:disabled {
@@ -705,9 +752,7 @@ button:disabled {
 .result-empty {
   min-height: 640px;
   padding: clamp(2rem, 5vw, 4rem);
-  background:
-    linear-gradient(var(--paper), var(--paper)) padding-box,
-    repeating-linear-gradient(0deg, transparent 0 47px, rgb(30 82 109 / 7%) 47px 48px);
+  background: var(--paper);
 }
 
 .empty-mark {
@@ -763,6 +808,48 @@ button:disabled {
   line-height: 1;
 }
 
+.preparation-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--canvas);
+}
+
+.preparation-strip .status-mark {
+  width: 38px;
+  height: 38px;
+  flex-basis: 38px;
+}
+
+.preparation-strip .status-mark svg {
+  width: 20px;
+}
+
+.preparation-strip > div > span,
+.preparation-strip > div > strong,
+.preparation-strip > div > small {
+  display: block;
+}
+
+.preparation-strip > div > span {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.preparation-strip > div > strong {
+  margin-top: 0.08rem;
+}
+
+.preparation-strip > div > small {
+  margin-top: 0.12rem;
+  color: var(--ink-soft);
+}
+
 .status-mark {
   display: grid;
   width: 48px;
@@ -796,6 +883,25 @@ button:disabled {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-bottom: 1px solid var(--line);
+}
+
+.classification-section {
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.classification-heading {
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.classification-heading h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.classification-section .mapping-strip {
+  border-top: 1px solid var(--line);
 }
 
 .mapping-strip > div {
@@ -962,6 +1068,17 @@ th:last-child {
   border-top: 1px solid var(--line);
 }
 
+.section-heading > .checklist-intro {
+  max-width: 62ch;
+  margin: 0.65rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.55;
+  text-transform: none;
+}
+
 .finding {
   margin: 0;
   padding: 1.2rem 0;
@@ -1018,8 +1135,70 @@ th:last-child {
 }
 
 .finding-body > p {
+  max-width: 68ch;
   color: var(--ink-soft);
-  font-size: 0.83rem;
+  font-size: 1rem;
+}
+
+.plain-task-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.55fr);
+  gap: 0;
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.plain-task-grid section {
+  padding: 1rem 0;
+}
+
+.plain-task-grid section:first-child {
+  grid-row: span 2;
+  padding-right: 1rem;
+  border-right: 1px solid var(--line);
+}
+
+.plain-task-grid section:not(:first-child) {
+  padding-left: 1rem;
+}
+
+.plain-task-grid section:last-child {
+  border-top: 1px solid var(--line);
+}
+
+.plain-task-grid h5 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.plain-task-grid p,
+.plain-task-grid ul {
+  margin: 0.45rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.plain-task-grid ul {
+  padding-left: 1.2rem;
+}
+
+.plain-task-grid li + li {
+  margin-top: 0.35rem;
+}
+
+.technical-details {
+  margin-top: 1rem;
+}
+
+.technical-details > summary {
+  font-size: 1rem;
+}
+
+.technical-details > p {
+  color: var(--ink-soft);
+  font-size: 1rem;
 }
 
 .evidence-state {
@@ -1277,6 +1456,21 @@ footer p {
   .finding-ledger > div {
     grid-template-columns: 1fr;
     gap: 0.15rem;
+  }
+
+  .plain-task-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plain-task-grid section:first-child {
+    grid-row: auto;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .plain-task-grid section:not(:first-child) {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
   }
 
   .cost-total {
