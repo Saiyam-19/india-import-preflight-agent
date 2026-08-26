@@ -28,6 +28,7 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   devIndicators: false,
   poweredByHeader: false,
+  serverExternalPackages: ["pdfjs-dist"],
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

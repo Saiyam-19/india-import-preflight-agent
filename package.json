@@ -10,8 +10,11 @@
     "start": "next start --hostname 127.0.0.1 --port 3210",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:extraction": "vitest run tests/extraction tests/contracts/extraction-privacy.test.ts",
-    "test:live-extraction": "RUN_LIVE_OPENAI_EXTRACTION=1 vitest run tests/extraction/live-openai.test.ts",
+    "test:agent-first": "vitest run tests/agent-first",
+    "test:live-guidance": "RUN_LIVE_OPENAI_GUIDANCE=1 vitest run tests/agent-first/live-guidance.test.ts",
+    "test:unseen-harness": "node scripts/run-unseen-product-harness.mjs",
+    "test:documents": "vitest run tests/agent-first/document-intake.test.ts tests/agent-first/document-memory.test.ts tests/agent-first/document-routes.test.ts tests/contracts/extraction-privacy.test.ts",
+    "test:extraction": "pnpm test:documents",
     "test:contracts": "vitest run tests/contracts",
     "test:browser": "playwright test",
     "typecheck": "tsc --noEmit",
@@ -25,6 +28,7 @@
     "@openai/agents": "^0.17.0",
     "decimal.js": "^10.6.0",
     "next": "16.3.0",
+    "pdfjs-dist": "^6.2.108",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "zod": "^4.1.0"
@@ -41,6 +45,6 @@
     "vitest": "^3.2.0"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=24.0.0"
   }
 }

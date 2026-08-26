@@ -1,5 +1,7 @@
 .DS_Store
+.codebase-memory/
 .demo-recording/
+.data/
 .docx_work/
 .env*
 !.env.example
