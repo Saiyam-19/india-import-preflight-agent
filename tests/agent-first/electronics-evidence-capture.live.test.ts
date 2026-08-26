@@ -243,12 +243,12 @@ const characteristicIds = [
 
 const authorities = [
   ["dgft", "Directorate General of Foreign Trade", "licensing", always, "https://www.dgft.gov.in/CP/"],
-  ["customs", "Indian Customs Electronic Gateway", "customs", always, "https://www.icegate.gov.in/contact_us"],
+  ["customs", "Indian Customs Electronic Gateway", "customs", always, "https://www.icegate.gov.in/guidelines/helpdesk"],
   ["wpc", "Wireless Planning & Coordination (WPC) Wing", "telecom", radioPresent, "https://www.eservices.dot.gov.in/equipment-type-approval-eta"],
-  ["tec", "Telecommunication Engineering Centre", "telecom", telecomInterface, "https://www.mtcte.tec.gov.in/contact_us"],
+  ["tec", "Telecommunication Engineering Centre", "telecom", telecomInterface, "https://www.mtcte.tec.gov.in/contact_tec"],
   ["bis", "Bureau of Indian Standards", "standards", always, "https://www.bis.gov.in/directory/enquiry/?lang=en"],
   ["cpcb", "Central Pollution Control Board", "environmental", always, "https://cpcb.nic.in/"],
-  ["legal-metrology", "Department of Consumer Affairs Legal Metrology", "consumer_protection", always, "https://consumeraffairs.nic.in/organisation-and-units/division/legal-metrology"],
+  ["legal-metrology", "Department of Consumer Affairs Legal Metrology", "consumer_protection", always, "https://consumeraffairs.gov.in/pages/legal-metrology-overview"],
 ] as const;
 
 function buildNodes(admittedById: Map<string, CapturedAdmission>) {

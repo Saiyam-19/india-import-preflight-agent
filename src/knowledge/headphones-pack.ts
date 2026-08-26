@@ -345,7 +345,7 @@ const sources: ProductPack["sources"] = [
     authority: "Indian Customs Electronic Gateway",
     title: "Customs Duty Calculator and import tool",
     instrumentId: "ICEGATE import assessment tool",
-    url: "https://www.icegate.gov.in/Webappl/index_imp.jsp",
+    url: "https://www.icegate.gov.in/services/customs-duty-calculator",
     pinpoint: {
       locator: "CTH, country of origin and notification assessment inputs",
       relevance: "Provides the assessment-date Customs destination for origin-dependent measures and preferences.",
@@ -479,7 +479,7 @@ const tradeRemedyAction: ProductPack["rules"][number]["remediation"][number] = {
   requiredDocuments: ["Dated ICEGATE assessment record", "Dated DGTR search record", "Origin and party evidence"],
   destination: {
     label: "ICEGATE import assessment tool",
-    url: "https://www.icegate.gov.in/Webappl/index_imp.jsp",
+    url: "https://www.icegate.gov.in/services/customs-duty-calculator",
   },
   rerunCondition: "Re-run on any origin/party change, stale check or possible measure match.",
 };

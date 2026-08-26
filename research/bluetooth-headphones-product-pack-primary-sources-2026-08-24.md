@@ -105,7 +105,7 @@ The pack requires a declaration proof before sale, but current pack research doe
 
 Ready requires exact origin, producer and exporter plus a dated official check in ICEGATE and the DGTR investigation record:
 
-- ICEGATE Customs Duty Calculator/import tool: <https://www.icegate.gov.in/Webappl/index_imp.jsp>
+- ICEGATE Customs Duty Calculator service: <https://www.icegate.gov.in/services/customs-duty-calculator>
 - DGTR anti-dumping investigations: <https://www.dgtr.gov.in/en/anti-dumping-investigation-in-india>
 
 The pack makes no universal “no trade remedy” claim. Unknown origin/producer/exporter, an absent or stale check, or an unresolved match returns `Needs verification` and no cost. A confirmed applicable measure requires a new sourced rate determination before any numerical result.

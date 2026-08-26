@@ -812,7 +812,7 @@
       "payload": {
         "authorityNodeId": "agency-customs",
         "channel": "official_web",
-        "value": "https://www.icegate.gov.in/contact_us",
+        "value": "https://www.icegate.gov.in/guidelines/helpdesk",
         "purpose": "Indian Customs Electronic Gateway verification"
       },
       "fieldEvidence": {},
@@ -939,7 +939,7 @@
       "payload": {
         "authorityNodeId": "agency-tec",
         "channel": "official_web",
-        "value": "https://www.mtcte.tec.gov.in/contact_us",
+        "value": "https://www.mtcte.tec.gov.in/contact_tec",
         "purpose": "Telecommunication Engineering Centre verification"
       },
       "fieldEvidence": {},
@@ -1059,7 +1059,7 @@
       "payload": {
         "authorityNodeId": "agency-legal-metrology",
         "channel": "official_web",
-        "value": "https://consumeraffairs.nic.in/organisation-and-units/division/legal-metrology",
+        "value": "https://consumeraffairs.gov.in/pages/legal-metrology-overview",
         "purpose": "Department of Consumer Affairs Legal Metrology verification"
       },
       "fieldEvidence": {},

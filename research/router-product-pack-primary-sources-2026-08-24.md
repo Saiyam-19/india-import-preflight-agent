@@ -83,7 +83,7 @@ Notification 02/2019-Customs, dated 2019-01-29, G.S.R.60(E), substituted Notific
 No country-independent “nil trade remedy” conclusion is admitted. Anti-dumping/countervailing measures are defined by product-under-consideration, origin/export, producer/exporter and operative notification; HS codes can be indicative rather than dispositive.
 
 - DGTR current anti-dumping investigations: <https://www.dgtr.gov.in/en/anti-dumping-investigation-in-india>.
-- ICEGATE import-duty entry point expressly asks for country of origin for preferential or anti-dumping duty: <https://www.icegate.gov.in/Webappl/index_imp.jsp>.
+- ICEGATE's current Customs Duty Calculator service page is the official duty-calculation entry point: <https://www.icegate.gov.in/services/customs-duty-calculator>.
 - ICEGATE `85176290` checks returned safeguard/additional-duty fields at zero, but the response does not prove the absence of every product-description-specific anti-dumping measure.
 
 **Contract rule:** exact origin, exporter and producer plus a dated official DGTR/CBIC/ICEGATE measure check are mandatory before `Ready`. Missing or ambiguous evidence is `Needs verification`; it is not a proven customs blocker. Never calculate a preference or trade remedy from HS alone.

@@ -346,7 +346,7 @@ describe("evidence ingestion prerequisite repair", () => {
     const result = await admitSourceEvidence(
       baseRequest({
         sourceKind: "official_contact_page",
-        url: "https://www.mtcte.tec.gov.in/contact_us",
+        url: "https://www.mtcte.tec.gov.in/contact_tec",
         instrumentTitle: "MTCTE official contact page",
         identityEvidence: {
           ...baseRequest().identityEvidence,

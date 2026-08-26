@@ -89,7 +89,7 @@ For assessable value ₹100,000, with no preference or applicable trade remedy:
 
 - Telecommunications (Radio Equipment Possession Authorisation) Rules, 2026, G.S.R.592(E), rules 4–6 and 8–10, cover purchase or import for sale: <https://eservices.dot.gov.in/sites/default/files/media-docs/telecommunications-radio-equipment-possession-authorisation-rules-2026-2.pdf>.
 - DGFT General Notes 2025, pp.5–6 para 5, lists imported retail-package declarations: <https://content.dgft.gov.in/Website/General_Notes_to_Import_Policy_2025.pdf>.
-- ICEGATE's import assessment tool requests CTH, description and origin for preferential or anti-dumping assessment: <https://www.icegate.gov.in/Webappl/index_imp.jsp>.
+- ICEGATE's current Customs Duty Calculator service page is the official duty-calculation entry point: <https://www.icegate.gov.in/services/customs-duty-calculator>.
 - DGTR's current investigation index is searched by exact product, origin, producer and exporter: <https://www.dgtr.gov.in/en/anti-dumping-investigation-in-india>.
 
 **Encoded effects:** missing REPA blocks overall legal readiness but is `non_clearance` because no checked primary pinpoint makes it a Customs release document. Package declarations are a `non_clearance` warning. Unknown origin or parties, an undated check or a possible trade-remedy match returns `Needs verification` and suppresses numeric cost.
