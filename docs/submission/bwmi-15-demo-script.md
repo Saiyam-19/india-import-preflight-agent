@@ -1,23 +1,31 @@
-# India Import Preflight — demo narration
+# India Trade Compliance Assistant - demo narration
 
-Recorded duration: 64.3 seconds. All names, identifiers, and values shown are synthetic. This script is paced to the verified video and remains below the two-minute limit.
+Recorded duration: 93.4 seconds at 1280x720. All names, identifiers, products, documents, and values shown are synthetic. The video gate sampled opening, middle, and closing frames and confirmed the recording remains below two minutes.
 
-## 00:00–00:09 — Promise and privacy
+## 00:00-00:05 - Ask first
 
-“India Import Preflight tells an MSME, before ordering, whether an exact shipment is ready, blocked, or still needs verification. It is public, needs no login, and saves no case data.”
+“This is a chat-first India Trade Compliance Assistant. I can ask about an import immediately, with no case form in the way. The first reply groups the exact transaction and product evidence it needs.”
 
-## 00:09–00:17 — Verified catalog
+## 00:05-00:16 - One promised dossier
 
-“Only three independently verified full-support scenarios appear: a Wi-Fi router, over-ear Bluetooth headphones, and an indoor IP camera. Other product is a separate fail-closed path.”
+“The same reply promises one action dossier: documents, classification and regulatory checks, exact policy locations, verified forms and contacts, costs, blockers, owners, and government submission portals.”
 
-## 00:17–00:35 — Ready
+## 00:16-00:28 - Evidence-bound result
 
-“For this synthetic router shipment, confirmed facts and evidence produce Ready within checked scope. The report shows the admitted HS mapping, a line-by-line ₹43,960 duty estimate, official source pinpoints, checked dates, review dates, and estimate limits.”
+“With a synthetic router profile supplied, the deterministic path returns a Pending dossier. It names the blockers and puts the importer’s actions in order. Product names alone never establish classification or approval.”
 
-## 00:35–00:51 — Blocked
+## 00:28-00:40 - Portal and source honesty
 
-“Next, the headphones pack has exact-model WPC evidence marked missing. It returns Blocked only because an admitted official pinpoint conditions Customs clearance, then names the evidence, owner, official destination, and rerun condition.”
+“Each government filing service must have an admitted exact URL. The dossier shows the filer, access, login, documents, fee, deadline, and sequence, or marks the field Pending. The app never asks for credentials, uploads, pays, submits, or claims clearance.”
 
-## 00:51–01:04 — Needs verification
+## 00:40-00:56 - Citations and contacts
 
-“An unsupported product returns Needs verification, preserves universal facts in an on-screen Customs Broker summary, and never guesses classification, rules, documents, rates, or cost. Uncertainty stops the answer.”
+“Policy claims retain the authority, instrument, exact paragraph or section, page when verified, source version, verification date, and official link. Missing evidence stays visible instead of being guessed.”
+
+## 00:56-01:10 - Purchased-shipment recovery
+
+“If goods are already purchased, the same conversation switches to clearance and remediation guidance, saves supplied facts, and asks only for the remaining evidence or shipment status.”
+
+## 01:10-01:34 - Build choices and boundary
+
+“The final on-screen panel explains the build choices. A focused OpenAI Agents SDK agent is optional for deep research. Server-owned TypeScript tools control evidence admission, calculations, citations, and readiness. Separate SQLite stores prevent conversation facts from becoming regulatory evidence, and the workflow fails closed when proof is missing.”
