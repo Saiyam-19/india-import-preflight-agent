@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>全球法规网-中国商务法规</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="your keywords">
+    <meta name="description" content="your description">
+    <meta name="author" content="hl,haolei@ec.com.cn">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+    <!--[if IE]>
+    	<script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="laws">
+	<header class="header">
+		<nav class="nav blank clearfix">
+	<!--div class="u-logo1"><img src="img/logo1.png" alt=""></div-->
+	
+	<ul class="nav01_ul">
+		<li>
+			<a href="/claw/index.shtml">中国法规</a>|
+			<ul class="nav02_ul">
+				<li><a href="/claw/index.shtml">商务法规</a></li>
+				<li><a href="/pact/index.shtml">中外条约</a></li>
+			</ul>
+		</li>
+		<li><a href="/page/list/nations.html">各国法规</a>|
+			<ul class="nav02_ul">
+				<li><a href="/page/list/nations.html">境外法规</a></li>
+				<li><a href="/page/list/organizations.html">国际条约</a></li>
+			</ul>
+		</li>
+		<li><a href="/jwfg/index.shtml">境外法规检索</a>|
+		</li>
+		<li><a href="http://www.mofcom.gov.cn/article/ckzn/index.shtml">出口指南</a><!-- | -->
+		</li>
+<!-- 		<li><a href="/tsfy/index.shtml">图说方圆</a></li> -->
+		<li class="last"><a href="/">首页</a></li>
+	</ul>
+</nav>
+
+<!-- Matomo -->
+<script type="text/javascript">
+//If used is logged-in then call 'setUserId'
+//$userId variable must be set by the server when the user has successfully authenticated to your app.
+var _paq = window._paq || [];
+	
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  _paq.push(['enableHeartBeatTimer']);
+  (function() { 
+    var u="https://analysis.mofcom.gov.cn/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '137']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+	</header>
+	
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+	setReviseToolBar();
+	setAssociateToolbar();
+});
+function setReviseToolBar(){
+	$.ajax({
+		url:"/nflaw/front/www/claw/reviseCount?id=90362",
+		type:"get",
+		success:function(result){
+			if(!!result&&result>0){
+				$("#reviseToolbar").show();
+			}
+		}
+	});
+}
+
+function setAssociateToolbar(){
+	$.ajax({
+		url:"/nflaw/front/www/claw/associateCount?id=90362",
+		type:"get",
+		success:function(result){
+			if(!!result&&result>0){
+				$("#associateToolbar").show();
+			}
+		}
+	});
+}
+/* function doSubmitReviseForm(){
+	$("#clawForm").attr("action","/claw/clawRevise.shtml");
+	$("#clawForm").submit();
+}
+function doSubmitAssociateForm(){
+	$("#clawForm").attr("action","/claw/clawAssociate.shtml");
+	$("#clawForm").submit();
+} */
+function doSubmitKeySearch(){
+	if($("#keyword").val()==''){
+		alert("请输入关键字！");
+		$("#keyword").focus();
+		return false;
+	}else if($("#keyword").val().length>100){
+		alert("关键字 不能超过100位字符！");
+		$("#keyword").focus();
+		return false;
+	}else{
+		$("#keySearchForm").submit();
+	}
+}
+</script>
+<section class="search blank">
+	<div class="mt20 mb30 clearfix">
+		<div class="logo fl">
+			<img src="img/logo.png" alt="" />
+		</div>
+		<div class="search_box fr">
+			<div class="clearfix">
+				<form id="keySearchForm" name="keySearchForm" method="get" action="/claw/keySearchList.shtml">
+					<span class="btn_search_show fl">中国商务法规</span>
+					<input class="txt_search fl" type="text" name="keyword" id="keyword">
+					<input class="btn_search fl" type="button" value="搜索" onclick="doSubmitKeySearch()">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<nav class="navMain blank">
+	<a class="a1" href="http://policy.mofcom.gov.cn/">首页</a>&gt;<a href="/claw/index.shtml"><i>中国商务法规</i></a>&gt;<span class="s1">法规详情</span>
+</nav>
+<section class="main blank">
+	<div class="content mt18 posr">
+		<div class="conBox_01">
+			<h2 class="tit_08">中华人民共和国进出口商品检验法（2021修正） </h2>
+			<section class="con">
+				<h3 class="tit_09">
+					【信息来源：<em>
+					
+					     
+					     中国人大网
+					   
+					   
+					
+					</em>】
+				</h3>
+				<div class="tableBox">
+					<table class="table_01" width="100%">
+						<tr>
+							<td width="50%"><span>【发布部门】</span>全国人民代表大会常务委员会</td>
+							<td width="50%"><span>【发布文号】</span>中华人民共和国主席令第81号</td>
+						</tr>
+						<tr>
+							<td><span>【效力级别】</span>法律</td>
+							<td><span>【时效状态】</span>
+								现行有效
+								
+								
+								
+								
+							</td>
+						</tr>
+						<tr>
+							<td><span>【发布日期】</span>
+								
+									2021-04-29
+								
+							</td>
+							<td><span>【实施日期】</span>
+								
+									2021-04-29
+								
+							</td>
+						</tr>
+						<tr>
+							<td><span>【法律话题】</span>
+								
+									
+									质量消保
+								
+									;
+									对外贸易
+								
+							</td>
+							<td><span>【产业领域】</span>
+								
+								
+									商务服务
+								
+								;
+									公共管理
+								
+							</td>
+						</tr>
+							
+					</table>
+				</div>
+				<div class="article">
+					<p style="text-align:center;">中华人民共和国进出口商品检验法</p><p><br /></p><p>（1989年2月21日第7届全国人大常委会第6次会议通过。根据2002年4月28日第9届全国人大常委会第27次会议《关于修改〈中华人民共和国进出口商品检验法〉的决定》第1次修正。根据2013年6月29日第12届全国人大常委会第3次会议《关于修改〈中华人民共和国文物保护法〉等十二部法律的决定》第2次修正。根据2018年4月27日第13届全国人大常委会第2次会议《关于修改〈中华人民共和国国境卫生检疫法〉等六部法律的决定》第3次修正。根据2018年12月29日第13届全国人大常委会第7次会议《关于修改〈中华人民共和国产品质量法〉等五部法律的决定》第4次修正。根据2021年4月29日第13届全国人大常委会第28次会议《关于修改〈中华人民共和国道路交通安全法〉等八部法律的决定》第5次修正）</p><p><br /></p><p>　　第一章　总则</p><p><br /></p><p>　　第一条　为了加强进出口商品检验工作，规范进出口商品检验行为，维护社会公共利益和进出口贸易有关各方的合法权益，促进对外经济贸易关系的顺利发展，制定本法。</p><p><br /></p><p>　　第二条　国务院设立进出口商品检验部门（以下简称国家商检部门），主管全国进出口商品检验工作。国家商检部门设在各地的进出口商品检验机构（以下简称商检机构）管理所辖地区的进出口商品检验工作。</p><p><br /></p><p>　　第三条　商检机构和依法设立的检验机构（以下称其他检验机构），依法对进出口商品实施检验。</p><p><br /></p><p>　　第四条　进出口商品检验应当根据保护人类健康和安全、保护动物或者植物的生命和健康、保护环境、防止欺诈行为、维护国家安全的原则，由国家商检部门制定、调整必须实施检验的进出口商品目录（以下简称目录）并公布实施。</p><p><br /></p><p>　　第五条　列入目录的进出口商品，由商检机构实施检验。</p><p><br /></p><p>　　前款规定的进口商品未经检验的，不准销售、使用；前款规定的出口商品未经检验合格的，不准出口。</p><p><br /></p><p>　　本条第一款规定的进出口商品，其中符合国家规定的免予检验条件的，由收货人或者发货人申请，经国家商检部门审查批准，可以免予检验。</p><p><br /></p><p>　　第六条　必须实施的进出口商品检验，是指确定列入目录的进出口商品是否符合国家技术规范的强制性要求的合格评定活动。</p><p><br /></p><p>　　合格评定程序包括：抽样、检验和检查；评估、验证和合格保证；注册、认可和批准以及各项的组合。</p><p><br /></p><p>　　对本条第一款规定的进出口商品检验，商检机构可以采信检验机构的检验结果；国家商检部门对前述检验机构实行目录管理。</p><p><br /></p><p>　　第七条　列入目录的进出口商品，按照国家技术规范的强制性要求进行检验；尚未制定国家技术规范的强制性要求的，应当依法及时制定，未制定之前，可以参照国家商检部门指定的国外有关标准进行检验。</p><p><br /></p><p>　　第八条　其他检验机构，可以接受对外贸易关系人或者外国检验机构的委托，办理进出口商品检验鉴定业务。</p><p><br /></p><p>　　第九条　法律、行政法规规定由其他检验机构实施检验的进出口商品或者检验项目，依照有关法律、行政法规的规定办理。</p><p><br /></p><p>　　第十条　国家商检部门和商检机构应当及时收集和向有关方面提供进出口商品检验方面的信息。</p><p><br /></p><p>　　国家商检部门和商检机构的工作人员在履行进出口商品检验的职责中，对所知悉的商业秘密负有保密义务。</p><p><br /></p><p>　　第二章　进口商品的检验</p><p><br /></p><p>　　第十一条　本法规定必须经商检机构检验的进口商品的收货人或者其代理人，应当向报关地的商检机构报检。</p><p><br /></p><p>　　第十二条　本法规定必须经商检机构检验的进口商品的收货人或者其代理人，应当在商检机构规定的地点和期限内，接受商检机构对进口商品的检验。商检机构应当在国家商检部门统一规定的期限内检验完毕，并出具检验证单。</p><p><br /></p><p>　　第十三条　本法规定必须经商检机构检验的进口商品以外的进口商品的收货人，发现进口商品质量不合格或者残损短缺，需要由商检机构出证索赔的，应当向商检机构申请检验出证。</p><p><br /></p><p>　　第十四条　对重要的进口商品和大型的成套设备，收货人应当依据对外贸易合同约定在出口国装运前进行预检验、监造或者监装，主管部门应当加强监督；商检机构根据需要可以派出检验人员参加。</p><p><br /></p><p>　　第三章　出口商品的检验</p><p><br /></p><p>　　第十五条　本法规定必须经商检机构检验的出口商品的发货人或者其代理人，应当在商检机构规定的地点和期限内，向商检机构报检。商检机构应当在国家商检部门统一规定的期限内检验完毕，并出具检验证单。</p><p><br /></p><p>　　第十六条　经商检机构检验合格发给检验证单的出口商品，应当在商检机构规定的期限内报关出口；超过期限的，应当重新报检。</p><p><br /></p><p>　　第十七条　为出口危险货物生产包装容器的企业，必须申请商检机构进行包装容器的性能鉴定。生产出口危险货物的企业，必须申请商检机构进行包装容器的使用鉴定。使用未经鉴定合格的包装容器的危险货物，不准出口。</p><p><br /></p><p>　　第十八条　对装运出口易腐烂变质食品的船舱和集装箱，承运人或者装箱单位必须在装货前申请检验。未经检验合格的，不准装运。</p><p><br /></p><p>　　第四章　监督管理</p><p><br /></p><p>　　第十九条　商检机构对本法规定必须经商检机构检验的进出口商品以外的进出口商品，根据国家规定实施抽查检验。</p><p><br /></p><p>　　国家商检部门可以公布抽查检验结果或者向有关部门通报抽查检验情况。</p><p><br /></p><p>　　第二十条　商检机构根据便利对外贸易的需要，可以按照国家规定对列入目录的出口商品进行出厂前的质量监督管理和检验。</p><p><br /></p><p>　　第二十一条　为进出口货物的收发货人办理报检手续的代理人办理报检手续时应当向商检机构提交授权委托书。</p><p><br /></p><p>　　第二十二条　国家商检部门和商检机构依法对其他检验机构的进出口商品检验鉴定业务活动进行监督，可以对其检验的商品抽查检验。</p><p><br /></p><p>　　第二十三条　国务院认证认可监督管理部门根据国家统一的认证制度，对有关的进出口商品实施认证管理。</p><p><br /></p><p>　　第二十四条　认证机构可以根据国务院认证认可监督管理部门同外国有关机构签订的协议或者接受外国有关机构的委托进行进出口商品质量认证工作，准许在认证合格的进出口商品上使用质量认证标志。</p><p><br /></p><p>　　第二十五条　商检机构依照本法对实施许可制度的进出口商品实行验证管理，查验单证，核对证货是否相符。</p><p><br /></p><p>　　第二十六条　商检机构根据需要，对检验合格的进出口商品，可以加施商检标志或者封识。</p><p><br /></p><p>　　第二十七条　进出口商品的报检人对商检机构作出的检验结果有异议的，可以向原商检机构或者其上级商检机构以至国家商检部门申请复验，由受理复验的商检机构或者国家商检部门及时作出复验结论。</p><p><br /></p><p>　　第二十八条　当事人对商检机构、国家商检部门作出的复验结论不服或者对商检机构作出的处罚决定不服的，可以依法申请行政复议，也可以依法向人民法院提起诉讼。</p><p><br /></p><p>　　第二十九条　国家商检部门和商检机构履行职责，必须遵守法律，维护国家利益，依照法定职权和法定程序严格执法，接受监督。</p><p><br /></p><p>　　国家商检部门和商检机构应当根据依法履行职责的需要，加强队伍建设，使商检工作人员具有良好的政治、业务素质。商检工作人员应当定期接受业务培训和考核，经考核合格，方可上岗执行职务。</p><p><br /></p><p>　　商检工作人员必须忠于职守，文明服务，遵守职业道德，不得滥用职权，谋取私利。</p><p><br /></p><p>　　第三十条　国家商检部门和商检机构应当建立健全内部监督制度，对其工作人员的执法活动进行监督检查。</p><p><br /></p><p>　　商检机构内部负责受理报检、检验、出证放行等主要岗位的职责权限应当明确，并相互分离、相互制约。</p><p><br /></p><p>　　第三十一条　任何单位和个人均有权对国家商检部门、商检机构及其工作人员的违法、违纪行为进行控告、检举。收到控告、检举的机关应当依法按照职责分工及时查处，并为控告人、检举人保密。</p><p><br /></p><p>　　第五章　法律责任</p><p><br /></p><p>　　第三十二条　违反本法规定，将必须经商检机构检验的进口商品未报经检验而擅自销售或者使用的，或者将必须经商检机构检验的出口商品未报经检验合格而擅自出口的，由商检机构没收违法所得，并处货值金额百分之五以上百分之二十以下的罚款；构成犯罪的，依法追究刑事责任。</p><p><br /></p><p>　　第三十三条　进口或者出口属于掺杂掺假、以假充真、以次充好的商品或者以不合格进出口商品冒充合格进出口商品的，由商检机构责令停止进口或者出口，没收违法所得，并处货值金额百分之五十以上三倍以下的罚款；构成犯罪的，依法追究刑事责任。</p><p><br /></p><p>　　第三十四条　伪造、变造、买卖或者盗窃商检单证、印章、标志、封识、质量认证标志的，依法追究刑事责任；尚不够刑事处罚的，由商检机构、认证认可监督管理部门依据各自职责责令改正，没收违法所得，并处货值金额等值以下的罚款。</p><p><br /></p><p>　　第三十五条　国家商检部门、商检机构的工作人员违反本法规定，泄露所知悉的商业秘密的，依法给予行政处分，有违法所得的，没收违法所得；构成犯罪的，依法追究刑事责任。</p><p><br /></p><p>　　第三十六条　国家商检部门、商检机构的工作人员滥用职权，故意刁难的，徇私舞弊，伪造检验结果的，或者玩忽职守，延误检验出证的，依法给予行政处分；构成犯罪的，依法追究刑事责任。</p><p><br /></p><p>　　第六章&nbsp;&nbsp;附则</p><p><br /></p><p>　　第三十七条　商检机构和其他检验机构依照本法的规定实施检验和办理检验鉴定业务，依照国家有关规定收取费用。</p><p><br /></p><p>　　第三十八条　国务院根据本法制定实施条例。</p><p style="text-align:justify;"><br /></p>
+					
+					<br/>
+					<div class="u-related-box">
+							<h3 class="u-tt">推荐阅读</h3>
+							
+							
+							<dl class="u-related-list">
+								<dt >相关法规</dt>
+								
+									<dd><a href='/claw/clawContent.shtml?id=4959'>国家进出口商品检验局关于发布《代理进出口商品报验机构管理办法(试行)》的通知</a></dd>
+								
+									<dd><a href='/claw/clawContent.shtml?id=7522'>进出口商品检验鉴定机构管理办法（2016）</a></dd>
+								
+									<dd><a href='/claw/clawContent.shtml?id=66837'>中华人民共和国进出口商品检验法实施条例（2019修正）</a></dd>
+								
+							</dl>
+							
+							
+							<dl class="u-related-list">
+								<dt>相关各国法规</dt>
+								
+									<dd><a href="http://policy.mofcom.gov.cn/jwfg/detail.shtml?id=529997f8738ec7aa01738ec8c18f8529">澳大利亚2014年生物安全法案</a></dd>
+								
+									<dd><a href="http://policy.mofcom.gov.cn/jwfg/detail.shtml?id=529997f8738ec7aa01738ec8c18g1997">瑞士联邦经济事务、教育与研究部及联邦环境、交通、能源与通信部 植物健康条例实施细则（PGesV-WBF-UVEK）</a></dd>
+								
+									<dd><a href="http://policy.mofcom.gov.cn/jwfg/detail.shtml?id=529997f8738ec7aa01738ec8c18g8998">葡萄牙农林机械生产、进出口贸易监管条例</a></dd>
+								
+							</dl>
+							
+							
+						<br/>
+						<font color="#B22222">免责声明：本网站提供的法规来源于数据提供单位或网络，网站不对法规内容的准确性负责，请务必与正式文本核对后使用。网站访问者因使用或无法使用本网站提供的法规所造成的直接或间接损失，本网站不承担任何责任。</font>
+						</div>
+				</div>
+			</section>
+		
+		</div>
+	</div>
+</section>
+<form action="" method="get" id="clawForm">
+	<input type="hidden" name="id" value="90362"/>
+	<input type="hidden" name="title" value="中华人民共和国进出口商品检验法（2021修正） "/>
+	<input type="hidden" name="clawUrl" value=""/>
+</form>
+<div id="global-toolbar">
+  <div class="toolbar-wrap wrap">
+	<div class="toolbar">
+	  <div class="toolbar-tabs tab">
+		<!-- div class="toolbar-tab tbar-tab-word" onclick=""><i class="tab-ico"></i><em class="tab-text">修订对照<br />下载</em></div 
+		-->
+	  </div>
+	  <div class="toolbar-footer">
+		<div class="toolbar-tab tbar-tab-top">
+			<a href="#"><i class="tab-ico"></i><em class="footer-tab-text">顶部</em></a>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+	<footer class="footer mt30">
+				<section class="blank clearfix">
+			<dl class="nav_03 clearfix">
+				<dd>主办单位：中华人民共和国商务部</dd>
+				<dd>技术支持：中国国际电子商务中心</dd>
+				<dd>邮箱：global-law@ec.com.cn</dd>
+				<dd>客户服务：010-67801039</dd>
+				
+			</dl>
+			<dl class="nav_03 clearfix">
+				<dd>网站管理：商务部电子商务和信息化司</dd>
+			
+					<dd>网站标识码bm22000001</dd>
+					<dd><a href="https://beian.miit.gov.cn/" target="_blank"  onclick="if(confirm('您访问的链接即将离开“中华人民共和国商务部”政府网站，是否继续？')==false)return false;">京ICP备05004093号-1</a><br><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700091" target="_blank"  onclick="if(confirm('您访问的链接即将离开“中华人民共和国商务部”政府网站，是否继续？')==false)return false;"><img src="/law/img/footer-img03.png">京公网安备11040102700091号</a></dd>
+					
+			</dl>
+			<dl class="nav_03 cur clearfix">
+			
+				<dd style="width:200px">
+					<span id="_span_jiucuo" style="display: inline-block; margin-top: 13px;">
+						<!-- <script id="_jiucuo_" sitecode='bm22000001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script> -->
+					<a class="ft-jiucuo-link ediAssetsTextCon" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=bm22000001&amp;url=http%3A%2F%2Fwww.mofcom.gov.cn/" target="_blank"><img style="margin: 0px; border: 0px currentColor; border-image: none; cursor: pointer;" src="https://zfwzgl.www.gov.cn/exposure/images/jiucuo.png?v=bm22000001"></a>
+					</span>
+					<a href="//bszs.conac.cn/sitename?method=show&id=0726B28348831856E053012819AC9312" target="_blank" onclick="if(confirm('您访问的链接即将离开“中华人民共和国商务部”政府网站，是否继续？')==false)return false;">
+						<img src="http://dcs.conac.cn/image/red.png">
+					</a>
+				</dd>
+			</dl>
+			
+		</section>
+	</footer>
+	<script type="text/javascript">
+	
+	$(function(){
+		var article = $(".article").html();
+		if(null==article||''==article||article.length<20){
+			window.location.href="/index.shtml"
+		}
+	})
+	
+		/** scroll 浮层
+		$(window).scroll(function(){
+			var ht = $(this).scrollTop();
+			if(ht>210){
+				boxLeft();
+				$(".conBox_01,#toolbar_box").addClass("cur");
+			}else{
+				$(".conBox_01,#toolbar_box").removeClass("cur").removeAttr("style");
+			}
+		});***/
+	</script>
+</body>
+</html>

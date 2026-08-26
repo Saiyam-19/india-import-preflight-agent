@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="SiteName" content="中华人民共和国商务部">
+    <meta name="SiteDomain" content="www.mofcom.gov.cn">
+    <meta name="SiteIDCode" content="bm22000001">
+    <meta name="ColumnName" content="引进来">
+    <meta name="ColumnDescription" content="中国投资指南网引进来数据信息、投资信息、专题信息">
+    <meta name="ColumnKeywords" content="资讯，走进中国，投资中国">
+    <meta name="ColumnType" content="信息公开指南">
+    <meta name="viewport" content="width=1200 " />
+    <title>法律法规 - 中国投资指南</title>
+    <link rel="stylesheet" type="text/css" href="src/css/resets.css">
+    <link rel="stylesheet" type="text/css" href="src/css/base.css">
+    <link rel="stylesheet" type="text/css" href="src/css/come-lilun-con.css">
+    <link rel="stylesheet" type="text/css" href="src/pdfh5/css/pdfh5.css">
+    <script src="src/js/jquery-3.6.0.min.js"></script><!-- todo -->
+    <script type="text/javascript" src="https://fdi.mofcom.gov.cn/src/js/filterURI.js"></script><script>filterURL();</script>
+    <script src="src/js/url.js"></script>
+    <script src="src/pdfh5/js/pdf.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/pdfh5/js/pdf.worker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/pdfh5/js/pdfh5.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .content {
+            min-height: 800px !important;
+        }
+
+        .downloadBox {
+            padding: 20px 0 0 0;
+            line-height: 30px;
+        }
+
+        .downloadBox dt {
+            line-height: 60px;
+        }
+
+        .downloadBox dd {
+            padding: 0 20px;
+            display: inline-block;
+            width: 380px;
+            line-height: 20px;
+        }
+
+        .downloadBox dd a {
+            font-size: 16px;
+        }
+
+        .downloadBox dd a:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        .text-center {}
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?a2a34b0505af5a4ba980cf3649631aed";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="menu">
+        <h1>
+            <span><a href="index.html"><span>引进来</span></a> / <span>法律法规</span> / <span id="hdtit"></span></span>
+        </h1>
+    </div>
+    <div class="container" style="margin-top: 30px;overflow:hidden;">
+        <div class="pg-left">
+            <div class="content" id="content">
+            </div>
+        </div>
+        <div class="right-model" style="background: #fff">
+            <ul class="new-list2">
+                <h3><img src="src/images/laba.png" alt="">&nbsp;&nbsp;最新统计数据</h3>
+            </ul>
+            <ul class="new-list2">
+                <h3><img src="src/images/news2.png" alt="">&nbsp;&nbsp;相关数据</h3>
+                <li><a href="javascript:;">2013.01 月度进出口人民币值总值表</a></li>
+                <li><a href="javascript:;">2018年12月出口主要商品量值表（人民</a></li>
+                <li><a href="javascript:;">2018年12月进出口商品关别总值表（人</a></li>
+                <li><a href="javascript:;">2018年12月进出口商品境内目的地／货</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var hdtit = sessionStorage.getItem('idtext')
+        document.getElementById("hdtit").innerHTML = hdtit;
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        };
+        //接收URL中的参数
+        var Id = getUrlParam('id');
+        // var shortTimeURL = 'https://fdi.mofcom.gov.cn/cipa-api';
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json;charset=UTF-8',
+            url: shortTimeURL + '/laws/web/get?id=' + Id,
+            success: function (data) {
+                var jsonData = data.data;
+                // console.log(jsonData.content)
+                var str = '';
+                str += '<h2 class="text-center">' + jsonData.name + '</h2>';
+                str += '<div class="moreInfo text-center">';
+                if (jsonData.resource == undefined || jsonData.resource == '') {
+                    console.log('空值');
+                } else {
+                    str += '<span class="source">' + jsonData.resource + '</span>'
+                }
+                if (jsonData.issueNum === undefined || jsonData.issueNum === null) { } else {
+                    str += '<span class="source" style="margin-right:20px;">' + jsonData.issueNum + '</span>'
+                }
+                str += '<span class="time">' + jsonData.issueDate + '</span>'
+                //添加中英文对照
+                if (jsonData.hasOwnProperty("relatedId")) {
+                    str += '<span style="padding-left:15px;"><a href="/EN/come-falvfagui-con.html?id=' + jsonData.relatedId + '" target="_blank"><font color="#e61a1a"><strong>[英&nbsp;文]</strong></font></a></span>'
+                }
+                str += '</div>';
+                // 上面是判断来源
+                // 判断
+                if (jsonData.content == undefined || jsonData.content == '') {
+                    var url = jsonData.accessoryUrl.split(',');
+                    url.forEach(function(element){
+                        if (element.indexOf("pdf") != -1) {
+                            str+='<embed id="iframe" style="width:100%;height:800px;" src="'+element+'"></embed>';
+                        }
+                    });
+                } else {
+                    str += jsonData.content;
+                };
+                $('#content').append(str);
+                // var pdfh5 = new Pdfh5('#iframe', { pdfurl: jsonData.accessoryUrl });
+                // 假如附件是空或者没有定义
+                if (jsonData.accessoryUrl == undefined || jsonData.accessoryUrl == '') {
+                    console.log('没有附件')
+                } else {
+                    var downHtml = '';
+                    downHtml += '<dl class="downloadBox" style="text-align:left">';
+                    downHtml += '<dt>附件列表(点击下载):</dt>'
+                    var dataObj = JSON.parse(jsonData.accessory)
+                    console.log('11111',dataObj)
+                    $.each(dataObj, function (i, obj) {
+                        downHtml += '<dd>附件名称：<a href="' + obj.url + '" download="' + obj.name + '" title="' + obj.name + '" >' + obj.name.substring(0, 30) + '</a></dd>'
+                    })
+                    downHtml += '</dl>';
+                    $('.pg-left').append(downHtml)
+                }
+            }
+        })
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json;charset=UTF-8',
+            url: shortTimeURL + '/statistics/web/list',
+            data: JSON.stringify({
+                menuId: 1,
+                page: 1
+                // 输入关键字
+            }),
+            success: function (data) {
+                var str = ''
+                var jsonData = data.data;
+                $.each(jsonData, function (i, obj) {
+                    str += '<li>';
+                    str += '<a href="come-datatongji-con.html?id=' + obj.id + '">' + obj.name + '</a>';
+                    str += '</li>';
+                })
+                $('.new-list2:first-child').append(str);
+            }
+        });
+    </script>
+    <div id="footer"></div>
+</body>
+<script>
+    $('#header').load('come-head.html');
+    $('#footer').load('Footer.html');
+    $('#content p').each(function () {
+        var number = $(this).children().length;
+        if (number == 0) {
+            $(this).html($(this).html().replace(/\s+/g, ''))
+            $(this).html($(this).html().replace(/&nbsp;/ig, ''))
+        }
+    })
+</script>
+
+</html>

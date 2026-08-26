@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="version" contenttype="20260122163455" />
+    <!--网站标签 - 网站名称-->
+    <meta name="SiteName" content="海关政务服务" />
+    <!--网站标签 - 网站域名-->
+    <meta name="SiteDomain" content="http://online.customs.gov.cn" />
+    <!--网站标签 - 政府网站标识码-->
+    <meta name="SiteIDCode" content="bm28000001" />
+    <!--栏目标签 - 栏目名称-->
+    <meta name="ColumnName" content="海关政务服务办事指南" />
+    <!--栏目标签 - 栏目描述-->
+    <meta name="ColumnDescription" content="海关政务服务办事指南" />
+    <!--栏目标签 - 栏目关键词-->
+    <meta name="ColumnKeywords" content="海关政务服务，办事服务，办事指南" />
+    <!--栏目标签 - 栏目类别-->
+    <meta name="ColumnType" content="办事服务" />
+    <!--内容页面标签 - 标题-->
+    <meta name="ArticleTitle" content="办事指南卡片" />
+    <meta name="PubDate" content="2026-01-22 16:34">
+    <meta name="ContentSource" content="海关总署" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+	
+    <title>办事指南</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../image/"
+      mce-href="../image/logo.ico"
+    />
+
+
+    <link rel="stylesheet" href="../lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="../lib/layui/css/layui.mobile.css" />
+    <link rel="stylesheet" href="../css/guide.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/qrcode.js" type="text/javascript"></script>
+    <script src="../js/navScroll.js" type="text/javascript"></script>
+    <script src="../lib/layui/layui.js" type="text/javascript"></script>
+  </head>
+  <body style="padding-bottom: 50px;">
+    <div class="layui-container guide">
+      <div class="header mb20 mt10" style="overflow: auto">
+        <div class="header-title fl">
+          <h3>
+            货物申报
+            <i id="collection" class="layui-icon" onclick="collection()" style="color:#2d5c9a" title="我要收藏">&#xe600;</i>
+            <img id="elevationBtn" title="查看评价" class="layui-icon" onclick="parent.elevationShow()" src="../image/eleva.png" style="width: 25px; height: 27px; margin-left: 10px;cursor: pointer;">
+          </h3>
+          <p class="f12 c-gray">
+            事项编码：<span>11100000000014154E1000629002001</span>
+          </p>
+        </div>
+        <dvi class="code-url">
+          <div id="codeUrl"></div>
+          <div class="context">
+            <p>扫一扫二维码</p>
+            <p>手机打开当前网站</p>
+          </div>
+        </dvi>
+      </div>
+      <nav class="nav" style="clear: both">
+        <ul id="navigation" class="navigation">
+          <li>
+            <a href="#section1" class="current">基本信息</a>
+          </li>
+          <li>
+            <a href="#section2">办理流程</a>
+          </li>
+          <li>
+            <a href="#section3">办理材料目录</a>
+          </li>
+          <li>
+            <a href="#section4">受理条件</a>
+          </li>
+          <li>
+            <a href="#section5">收费标准</a>
+          </li>
+          <li>
+            <a href="#section6">设定依据</a>
+          </li>
+          <li>
+            <a href="#section7">常见问题解答</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="layui-row mt20">
+        <div class="layui-col-md12 layui-col-sm12" id="section1">
+          <div class="section">
+            <div class="guide-title">
+              基本信息
+              <div class="guide-actions"  id="guideActions">
+			  <div  class="guide-btn guide-btn-small fr"
+                onclick="parent.openapply()"
+               >在线办理</div>
+                <div  class="guide-btn guide-btn-small fr"
+                onclick="parent.elevation()"
+               >评价办事指南</div>
+              </div>
+            </div>
+            <div class="guide-content">
+              <table class="guide-table" >
+                <tbody>
+                  <tr>
+                    <td class="td-gray">事项类型</td>
+                    <td>行政检查</td>
+                    <td class="td-gray">办件类型</td>
+                    <td>承诺件</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">实施主体</td>
+                    <td>各直属海关、隶属海关</td>
+                    <td class="td-gray">行使层级</td>
+                    <td>国家级/局（署、会）</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">是否收费</td>
+                    <td>否</td>
+                    <td class="td-gray">办理形式</td>
+                       <td>  网上办理</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">到办事现场次数</td>
+                    <td>0次</td>
+                    <td class="td-gray">到办事现场次数说明</td>
+                       <td>无</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">承诺办结时限</td>
+                    	<td>无</td>
+                    <td class="td-gray">法定办结时限</td>
+                	   <td>无</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">承诺办结时限说明</td>
+                    	<td colspan='3'>无</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">法定办结时限说明</td>
+                    	<td colspan='3'>无</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">咨询方式</td>
+                   	   <td colspan='3'>各直属海关咨询电话（链接至各直属海关网站）或12360海关服务热线。</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">监督投诉方式</td>
+                   	   <td colspan='3'>各直属海关监督电话（链接至各直属海关网站）或12360海关服务热线。</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">办理时间</td>
+                   	   <td colspan='3'>（一）企业网上申请时间：24小时； （二）海关审核办理时间：各直属海关工作时间（链接至各直属海关网站）或拨打12360海关服务热线。</td>
+                  </tr>
+                  <tr>
+                    <td class="td-gray">办理地点</td>
+                   	   <td colspan='3'>网上办理：用户登录海关政务服务一体化平台（https://online.customs.gov.cn），进入到“货物通关”版块办理。</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-xs12 layui-col-md12" id="section2">
+          <div class="section">
+          		<div class="guide-title">办理流程</div>
+	            <div class="guide-content">
+	              <div class="guide-btn">
+	                <a onclick="showFileNew('流程图.docx')"
+	                  href="javascript:void(0)"
+	                  style="color: white"
+	                  ><i class="layui-icon layui-icon-read"></i>
+	                  点击下载办事流程图片 &gt;&gt;</a>
+	              </div>
+	              <div class="guide-title">办理流程(文字说明)</div>
+			        <div class="guide-content" id = "flowPath">
+			           （一）按照《中华人民共和国海关进出口货物报关单填制规范》的要求向海关传送报关单电子数据及随附单证。
+（二）进出口货物的收发货人以自己的名义，向海关申报的，报关单应当由进出口货物收发货人签名盖章，并随附有关单证。
+ 报关企业接受进出口货物的收发货人委托，以自己的名义或以委托人的名义向海关申报的，应当向海关提交由委托人签署的授权委托书，并按照委托书的授权范围办理有关海关手续。
+（三）电子数据报关单经过海关计算机检查接受申报。
+			       </div>
+			      </div>
+            </div>
+        </div>
+            <div class="layui-col-xs12 layui-col-md12" id="section3">
+                <div class="section">
+                    <div class="guide-title">
+                     		  办理材料目录
+                    </div>
+  
+                    <div class="guide-content">
+                        <table class="layui-table tc">
+                            <colgroup>
+                               <col width="30%">
+                                <col width="25%">
+                                <col width="10%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>材料名称</th>
+                                    <th>材料填写样本</th>
+                                    <th>材料类型</th>
+                                    <th>来源渠道</th>
+                                    <th>材料份数</th>
+                                    <th>材料必要性</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+	                               <tr>
+                                        <td>（一）合同、发票、运输单据、装箱单等商业单据；（二）进出口所需的许可证件及随附单证；（三）海关总署规定的其他进出口单证。</td>
+                                       		<td>无</td>
+                                         <td>原件</td>
+                                        <td>申请人自备</td>
+                                        	<td>电子1份</td>
+                                  		<!--  materialformat = 2 电子-->
+                                        <td>非必要</td>
+                                    </tr>
+                           </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        <div class="layui-col-xs12 layui-col-md12" id="section4">
+          <div class="section">
+            <div class="guide-title">
+              受理条件
+              <div
+                class="guide-title-drop"
+                onclick="dropDownContent(this,'acceptCondition')"
+              >
+                <span class="status-text">展开</span>
+                <i class="layui-icon down">&#xe61a;</i>
+                <i class="layui-icon up">&#xe619;</i>
+              </div>
+            </div>
+            <div class="guide-content pb30">
+              <div class="guide-introduction" id="acceptCondition">
+                  在海关注册登记的企业。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-xs12 layui-col-md12" id="section5">
+          <div class="section">
+            <div class="guide-title">
+              收费标准
+              <div
+                class="guide-title-drop"
+                onclick="dropDownContent(this,'feeBasis')"
+              >
+                <span class="status-text">展开</span>
+                <i class="layui-icon down">&#xe61a;</i>
+                <i class="layui-icon up">&#xe619;</i>
+              </div>
+            </div>
+            <div class="guide-content" id="feeBasis">
+             	不收费
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-xs12 layui-col-md12" id="section6">
+          <div class="section">
+            <div class="guide-title">
+              设定依据
+              <div
+              class="guide-title-drop"
+              onclick="dropDownContent(this,'bylaw')"
+            >
+              <span class="status-text">展开</span>
+              <i class="layui-icon down">&#xe61a;</i>
+              <i class="layui-icon up">&#xe619;</i>
+            </div>
+            </div>
+            <div class="guide-content" id="bylaw">
+				（一）《中华人民共和国海关法》
+第二十四条  进口货物的收货人、出口货物的发货人应当向海关如实申报，交验进出口许可证件和有关单证。国家限制进出口的货物，没有进出口许可证件的，不予放行，具体处理办法由国务院规定。
+进口货物的收货人应当自运输工具申报进境之日起十四日内，出口货物的发货人除海关特准的外应当在货物运抵海关监管区后、装货的二十四小时以前，向海关申报。
+进口货物的收货人超过前款规定期限向海关申报的，由海关征收滞报金。
+第二十五条  办理进出口货物的海关申报手续，应当采用纸质报关单和电子数据报关单的形式。
+（二）《中华人民共和国海关进出口货物申报管理规定》
+第七条  进出口货物的收发货人、受委托的报关企业应当依法如实向海关申报，对申报内容的真实性、准确性、完整性和规范性承担相应的法律责任。
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-xs12 layui-col-md12" id="section7">
+          <div class="section">
+            <div class="guide-title">常见问题解答</div>
+            <div class="guide-content">
+        		无
+            </div>
+          </div>
+        </div>
+      </div>
+   	     <div
+	        class="guide-btn guide-btn-large"
+	        style="float: left"
+	        id="applyUrl"
+	        onclick="parent.openapply()"
+	      >
+	        在线办理
+	      </div>
+	   	 <div
+	        class="guide-btn guide-btn-large"
+	        style="float: right"
+	        id="downBtnWord"
+	        onclick="downBtnWord()"
+	        value="“货物申报”政务服务事项办事指南.doc"
+	      >
+	        WORD版办事指南下载
+	      </div>
+	      <div
+	        class="guide-btn guide-btn-large"
+	        style="float: right"
+	        id="downBtnPdf"
+	        onclick="downBtnPdf()"
+	        value="“货物申报”政务服务事项办事指南.pdf"
+	      >
+	        PDF版办事指南下载
+	      </div>
+    </div>
+  </body>
+  <script>
+    //项目访问路径
+    var $ctx ;
+    var collectionFlag = false;
+    $(document).ready(function () {
+      if (window["context"] == undefined) {
+        if (!window.location.origin) {
+          $ctx = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+        }else{
+          $ctx = document.location.origin;
+        }
+      }else{
+        $ctx  = document.location.origin
+      }
+	  
+	  // 根据url参数判断是否为移动端调用(accessType), accessType为mobileApp时，隐藏在线办理、评价办事指南按钮
+      if(window.location.search){
+        var searchKeys = {};
+        window.location.search.substring('1').split('&').map(v =>{
+          var item  = {};
+          var key = v.split('=')[0];
+          var value = v.split('=')[1];
+          searchKeys[key] = value;
+        })
+       
+        if(searchKeys.accessType&& searchKeys.accessType == 'mobileApp'){
+          // 隐藏在线办理、评价办事指南按钮
+            $("#guideActions").hide();
+            $("#elevationBtn").hide();
+        } else {
+            // 获取好差评的事项列表，进行比对，不包含隐藏
+            //getElevationStatus()
+        }
+      }else {
+          //getElevationStatus()
+      }
+      //材料目录说明
+      /**
+         var materialExplanation="";
+         if($("#materialExplanation").html() !=null){
+    		//var materialExplanation = $("#materialExplanation").html().replace(/^\s+|\s+$/g,'').split('\n');
+    		var materialExplanation = $("#materialExplanation").html().replace('\n','<br/>').replace('\r','<br/>').replace(/^\s+|\s+$/g,'&nbsp;');
+
+	    }
+         $("#materialExplanation").html(materialExplanation);
+         */
+
+      // 受理条件
+      formatData('acceptCondition')
+      // 设定依据
+      formatData('bylaw')
+      // 收费标准
+      formatData('feeBasis')
+      // 办理流程文字说明
+      var flowPath = "";
+      if ($("#flowPath").html() != null) {
+        var flowPathList = $("#flowPath")
+          .html()
+          .replace(/^\s+|\s+$/g, "")
+          .split("\n");
+        for (i = 0; i < flowPathList.length; i++) {
+          flowPath = flowPath + "<p>" + flowPathList[i] + "</p>";
+        }
+      }
+      $("#flowPath").html(flowPath);
+
+      sectionH();
+      var userAgentInfo = navigator.userAgent;
+      var Agents = new Array(
+        "Android",
+        "iPhone",
+        "SymbianOS",
+        "Windows Phone",
+        "iPad",
+        "iPod"
+      );
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          $("#applyUrl").hide();
+          $(".guide-btn").css("font-size", "12px");
+          //$("#pjBtn").hide();
+        }
+      }
+
+      //给父级页面设置页面高度
+      var bodyHight = document.body.scrollHeight;
+      document.getElementsByTagName("body")[0].style.height =
+        document.body.scrollHeight + 100 + "px";
+		window.parent.setHeight(bodyHight);
+      
+      
+      $.ajax({
+            type:"GET",
+            url:"/ocportalserver/login/checklogin",
+            cache:false,
+            async:false,
+            dataType: "json",
+            success:function(data){
+                if(data.status == 1){
+                    $.ajax({
+			            type:"GET",
+			            url:"/ocportalserver/UserCollection/checkCollection?code=11100000000014154E1000629002001",
+			            cache:false,
+			            async:false,
+			            dataType: "json",
+			            success:function(data){
+			                if(data.status == 1){
+			                    if(data.data){
+			                      console.log("已收藏")
+			                      collectionFlag = true;
+			                      $("#collection").html("&#xe658;");
+			                    }
+			                }
+			            }
+			         });
+                }
+                
+            },
+            error:function(data){
+                 parent.proMsg(data.additionalMessage);
+            }
+
+        });
+      
+    });
+    $(document).scroll(function () {
+      var scroH = $(document).scrollTop(); //滚动高度
+      var viewH = $(window).height(); //可见高度
+      var contentH = $(document).height(); //内容高度
+
+      if (scroH > 50) {
+        //距离顶部大于100px时
+        $(".navigation").addClass("fixed");
+      } else {
+        $(".navigation").removeClass("fixed");
+      }
+      if (contentH - (scroH + viewH) <= 100) {
+        //距离底部高度小于100px
+      }
+      if ((contentH = scroH + viewH)) {
+        //滚动条滑到底部啦
+      }
+    });
+    function downBtnWord() {
+      var guideDownURL = $("#downBtnWord").attr("value");
+      window.open("./" + guideDownURL);
+    }
+    function downBtnPdf() {
+      var guideDownURL = $("#downBtnPdf").attr("value");
+      window.open("./" + guideDownURL);
+    }
+    function sectionH() {
+      var sectionLen = $(".section").length + 1;
+      for (var i = 1; i < sectionLen; i++) {
+        var sectionH = $("#section" + i).height();
+        $("#section" + i + ".section").css("height", sectionH + "px");
+      }
+    }
+    function getElevationStatus() {
+        let elevationItemListStr = window.sessionStorage.getItem("elevationItemList");
+        if (elevationItemListStr) {
+            setElevationHidden(JSON.parse(elevationItemListStr))
+        } else {
+            $.ajax({
+                type:"POST",
+                url:"/ocgbewebserver/ocgbe/ProjectImpController/queryListsByParams",
+                cache:false,
+                async:false,
+                dataType: "json",
+                success:function(data){
+                    if(data && data.length > 0){
+                        window.sessionStorage.setItem("elevationItemList", JSON.stringify(data))
+                        setElevationHidden(data)
+                    }
+                },
+                error:function(data){
+                }
+            });
+        }
+    }
+    function setElevationHidden(elevationItemList) {
+        let hiddenFlag = 1
+        for(var i = 0; i < elevationItemList.length; i ++) {
+            if(elevationItemList[i].taskcode = '11100000000014154E1000629002001') {
+                hiddenFlag = 0;
+                break;
+            }
+        }
+        if (hiddenFlag) {
+            $("#elevationBtn").hide();
+        }
+    }
+    function showFileNew(guidUrl) {
+      if (guidUrl != null && guidUrl != "") {
+        window.open("./" + guidUrl);
+      }
+    }
+
+    // 收藏
+    function collection(){
+      $.ajax({
+            type:"GET",
+            url:"/ocportalserver/login/checklogin",
+            cache:false,
+            async:false,
+            dataType: "json",
+            success:function(data){
+                if(data.status != 1){
+                	if(data.code == "11001"){
+                		parent.proMsg(data.additionalMessage);
+                	}else{
+                		parent.proMsg("系统异常请联系管理员!");
+                	}
+                	return;
+                }
+                if(collectionFlag == true){
+                    $.ajax({
+			            type:"GET",
+			            url:"/ocportalserver/UserCollection/deleteCollection?code=11100000000014154E1000629002001",
+			            cache:false,
+			            async:false,
+			            dataType: "json",
+			            success:function(data){
+			                if(data.status == 1){
+			                    parent.proMsg("取消收藏成功");
+			                    collectionFlag = false;
+			                    $("#collection").html("&#xe600;");
+			                }
+			            }
+			        });
+                }else{
+                	$.ajax({
+			            type:"GET",
+			            url:"/ocportalserver/UserCollection/collection?code=11100000000014154E1000629002001",
+			            cache:false,
+			            async:false,
+			            dataType: "json",
+			            success:function(data){
+			                if(data.status == 1){
+			                    parent.proMsg("收藏成功");
+			                    collectionFlag = true;
+			                    $("#collection").html("&#xe658;");
+			                }else{
+			                	 parent.proMsg(data.data.additionalMessage);
+			                }
+			            },
+			            error:function(xhr, status, error){
+			            	if(error.code == "1502"){
+			            	   parent.proMsg(error.additionalMessage);
+			            	}else{
+			            	   parent.proMsg("系统异常请联系管理员！");
+			            	}
+			               
+			            }
+			        });
+                }
+            },
+            error:function(data){
+                 parent.proMsg(data.additionalMessage);
+            }
+
+        });
+    }
+    // 生成二维码
+    var qrcode = new QRCode(document.getElementById("codeUrl"), {
+      width: 70, //设置宽高
+      height: 70,
+    });
+    qrcode.makeCode(window.location.href);
+    
+    qrcode._el.title = '';
+
+     // 初始化导航
+    initNavScroll();
+    // 导航点击跳转
+    function initNavScroll(){
+      new navScroll({
+      nav: {
+        //导航跳转功能，不需要可以删除此代码块
+        id: "navigation", //点击跳转到容器的导航ID 请把 ID 设置给 UL
+        current: "current", //默认点击A链接后，默认样式名
+        speed: 20, //动画执行速度，越小则越快。反之，越慢。
+        fixPx: 50, //在导航使用绝对定位且在窗口上方，容器与导航的差,默认为0
+      },
+    });
+    }
+
+    // 内容展开下拉
+    function dropDownContent(_this, domId) {
+      if ($(_this).find(".status-text").text() == "展开") {
+        $(_this).find(".status-text").text("收起");
+        $(_this).find(".layui-icon.down").hide();
+        $(_this).find(".layui-icon.up").show();
+        $("#" + domId).html($("#" + domId).attr("data-content"));
+        $("#" + domId).removeClass("text-ellipsis");
+      } else {
+        $(_this).find(".status-text").text("展开");
+        $(_this).find(".layui-icon.down").show();
+        $(_this).find(".layui-icon.up").hide();
+        $("#" + domId).html($("#" + domId).attr("data-contentShort"));
+        $("#" + domId).addClass("text-ellipsis");
+      }
+	  // 重置navScroll
+      initNavScroll();
+    }
+    // 格式化文本内容
+    function formatData(domId) {
+      // 全部内容
+      var textContentAll = "";
+      // 前4条内容
+      var textContentShort = "";
+      // 内容按回车分隔的集合
+      var textContentList = [];
+      if ($("#" + domId).html() != null) {
+        textContentList = $("#" + domId)
+          .html()
+          .replace(/^\s+|\s+$/g, "")
+          .split("\n");
+        for (i = 0; i < textContentList.length; i++) {
+          textContentAll = textContentAll + "<p>" + textContentList[i] + "</p>";
+          if (i < 4) {
+            textContentShort =
+              textContentShort + "<p>" + textContentList[i] + "</p>";
+          }
+        }
+      
+      }
+      // 如果前四条内容和全部内容相等，显示全部内容，否则显示前四条
+      if (textContentAll != textContentShort) {
+        $("#" + domId).attr({
+          'data-content': textContentAll,
+          'data-contentShort': textContentShort,
+        });
+        $("#" + domId).addClass("text-ellipsis").html(textContentShort);
+        $("#" + domId)
+          .parent()
+          .parent()
+          .find(".guide-title-drop")
+          .show();
+      } else {
+        $("#" + domId)
+          .parent()
+          .parent()
+          .find(".guide-title-drop")
+          .hide();
+        $("#" + domId).removeClass("text-ellipsis").html(textContentAll);;
+      }
+    }
+  </script>
+</html>

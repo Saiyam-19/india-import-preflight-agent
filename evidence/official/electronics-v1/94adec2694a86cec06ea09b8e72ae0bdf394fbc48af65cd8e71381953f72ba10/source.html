@@ -1,0 +1,510 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon"
+	href="/images/favicon_0.ico" />
+<title>MTCTE Portal: TEC Online Certification Portal</title>
+<link
+	href="/resources/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="/resources/vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="/resources/css/jquery.dataTables.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="/resources/vendor/datatables/dataTables.bootstrap4.css"
+	rel="stylesheet" type="text/css">
+<link href="/resources/css/sb-admin.css"
+	rel="stylesheet">
+<link href="/resources/css/tabStyle.css"
+	rel="stylesheet">
+<link href="/resources/css/home.css" rel=" stylesheet"
+	media="all" type="text/css" title="norm">
+<link href="/resources/css/home_contrast.css"
+	rel="alternate stylesheet" media="all" type="text/css" title="contrast">
+<link
+	href="/resources/css/customStyle.css?ver=2.12.113"
+	rel="stylesheet">
+<link href="/resources/css/dateRangeFilter.css"
+	rel="stylesheet">
+<link
+	href="/resources/vendor/tail-date-time-picker/tail.datetime-default.css"
+	rel="stylesheet">
+<link href="/resources/vendor/select2/select2.min.css"
+	rel="stylesheet">
+<link
+	href="/resources/vendor/highcharts/highchart.css"
+	rel="stylesheet">
+</head>
+
+<div id="loading" class="displayNone_loader">
+	<img id="loading-image"
+		src="/images/loading.gif"
+		alt="Loading..." />
+</div>
+
+<body class="html front not-logged-in no-sidebars page-node i18n-en">
+	<div class="container-fluid topPan">
+		<div class="mx-auto" id="top_bar">
+			<div class="row padding6">
+				<div class="col">
+					<div class="tophead_left ">
+						<span><a class="color-me homepage3"
+							title="Facebook Page of DOT"
+							href="https://www.facebook.com/DoTIndia/" target="_blank"
+							rel="noopener noreferrer"><i
+								class="fa fa-fw fa-facebook font22"></i> </a> <a class="color-me"
+							title="Twitter Page of DOT"
+							href="https://www.twitter.com/dot_india?lang=en" target="_blank"
+							rel="noopener noreferrer"><i
+								class="fa fa-fw fa-twitter font22"></i> </a></span>
+					</div>
+					<div class="row tophead_right ">
+						<div id="content-desktop">
+							<div class="dropdown">
+								<a class="dropbtn color-me"
+									title="Change Font Size & Color of Website"><i
+									class=" fa fa-font "></i>&nbsp; &nbsp; </a>
+								<div class="dropdown-content minwidth18">
+									<button id="button_increase" class="text_btn" value="A+"
+										type="button">A+</button>
+									<br>
+									<button id="button_normal" class="text_btn" value="A"
+										type="button">A</button>
+									<br>
+									<button id="button_decrease" class="text_btn" value="A-"
+										type="button">A-</button>
+								</div>
+							</div>
+						</div>
+						<span><a class=" color-me" title="Skip to main content"
+							href="#skipCont"><i class="fa fa-arrow-circle-o-down"></i></a></span>&nbsp;
+						&nbsp; <span> <a class=" color-me font16"
+							title="Search Here"
+							href="https://cse.google.co.in/cse?cx=015914319489034283175:da0s-whwmo4"
+							target="_blank" rel="noopener noreferrer"><i
+								class="fa fa-search"></i></a>
+						</span> &nbsp; &nbsp; &nbsp; <span><a class=" color-me font16"
+							id="language_english" href="">English </a></span> &nbsp; &nbsp; &nbsp; <span><a
+							id="language_hindi" class="color-me font16"
+							title="Hindi version of Website" href="" target="_blank"
+							rel="noopener noreferrer">Hindi </a> </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="SearchModal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Search Here</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div>
+						<script nonce="6eee0b71-3ac2-4042-a082-3589c2306b13">
+							(function() {
+								var cx = '015914319489034283175:zxroegmw4hi';
+								var gcse = document.createElement('script');
+								gcse.type = 'text/javascript';
+								gcse.async = true;
+								gcse.src = 'https://cse.google.com/cse.js?cx='
+										+ cx;
+								var s = document.getElementsByTagName('script')[0];
+								s.parentNode.insertBefore(gcse, s);
+								
+								
+							})();
+							
+							var languageElement = document.getElementById('language_hindi');
+							var currentURL = window.location.href;
+							if(currentURL.includes('?'))
+								languageElement.href = currentURL.slice(0, currentURL.indexOf('?')) + "_hindi" + currentURL.slice(currentURL.indexOf('?'));
+							else
+								languageElement.href = currentURL+"_hindi";
+							
+							var languageElement2 = document.getElementById('language_english');
+							var currentURL2 = window.location.href;
+							var currentURL3 = currentURL2.replace("_hindi","");
+							languageElement2.href = currentURL3[0];
+							
+						</script>
+						<gcse:search></gcse:search>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="page">
+		<header id="masthead" class="container padTopBtm10" role="banner">
+			<div class="row">
+				<div class="col-sm-2">
+					<div class="card emblem" align="center">
+						<span><strong>GOVERNMENT OF INDIA</strong></span> <span><strong>भारत
+								सरकार</strong></span> <a title="Government of India"><img
+							src="/images/ashoka.png"
+							alt="Government of India"></a>
+					</div>
+				</div>
+				<div class="col-sm-8 padding0" align="center">
+					<div class="card header-name">
+						<span class="font24"><strong>TELECOMMUNICATION
+								ENGINEERING CENTRE</strong></span> <span class="font17">MANDATORY TESTING
+							& CERTIFICATION OF TELECOMMUNICATION EQUIPMENT PORTAL</span>
+					</div>
+				</div>
+				<div class="col-sm-2 " align="center">
+					<h1 class="logo">
+						<a href="http://www.tec.gov.in" target="_blank"
+							rel="noopener noreferrer" title="TEC"> <img
+							src="/images/TEC.gif"
+							alt="TEC Site">
+						</a>
+					</h1>
+				</div>
+			</div>
+		</header>
+		<nav
+			class="navbar navbar-expand-lg nav-a  navbar-dark navigation width100"
+			id="mainNav">
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+				data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justifyContent"
+				id="navbarResponsive">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link color-me" href="login">HOME
+							&nbsp; &nbsp; </a></li>
+					<li class="nav-item "><a class="nav-link color-me"
+						href="aboutMTCTE">ABOUT MTCTE &nbsp; &nbsp;</a></li>
+					<li class="nav-item"><a class="nav-link color-me"
+						href="certified_equipments">CERTIFIED EQUIPMENTS &nbsp; &nbsp;</a></li>
+					<li class="nav-item" data-toggle="tooltip" data-placement="right">
+						<a href="designated_Labs" class="nav-link color-me">LABS
+							&nbsp; &nbsp;</a>
+					</li>
+					<li class="nav-item" data-toggle="tooltip" data-placement="right"><div
+							class="nav-link nav-link-collapse collapsed color-me dropdown"
+							data-toggle="collapse" href="#collapseComponents"
+							data-parent="#exampleAccordion">
+							<a class="dropbtn color-me">ESSENTIAL REQUIREMENTS &nbsp;
+								&nbsp;</a>
+							<div class="dropdown-content minwidth250">
+								<a href="er_list">LIST OF ER</a> <a href="er_inst">List of
+									ITSAR</a> <a href="annexures">ANNEXURES TO ER</a> <a
+									href="https://nccs.gov.in/home/itsars">Security Requirements</a>
+							</div>
+						</div></li>
+					<li class="nav-item" data-toggle="tooltip" data-placement="right"><div
+							class="nav-link nav-link-collapse collapsed color-me dropdown"
+							data-toggle="collapse" href="#collapseComponents"
+							data-parent="#exampleAccordion">
+							<a class="dropbtn color-me">DOWNLOADS &nbsp; &nbsp;</a>
+							<div class="dropdown-content minwidth250">
+								<a href="downloads?section=0">List of Circulars/Instructions</a>
+								<a href="downloads?section=1">Proforma/Formats for MTCTE</a>
+							</div>
+						</div></li>
+					<li class="nav-item"><a class="nav-link color-me" href="faq">FAQs
+							&nbsp; &nbsp;</a></li>
+					<li class="nav-item"><a class="nav-link color-me"
+						href="contact_tec">CONTACT US &nbsp; &nbsp;</a></li>
+					<li class="nav-item"><a class="nav-link color-me"
+						href="helpvideos">HELP &nbsp; &nbsp;</a></li>
+					<!-- <li class="nav-item"><a class="nav-link homepagecolor4"
+						data-toggle="modal"
+						data-target="#LoginModal"><strong>LOGIN</strong>&nbsp; &nbsp;</a></li> -->
+					<li class="nav-item" id="loginHomeLink"><button
+							class="nav-link homepagecolor5 login" id="logIn_button">LOGIN
+							&nbsp; &nbsp;</button></li>
+
+					<li class="nav-item displayNone" id="logoutHomeLink"><a
+						class="nav-link  homepagecolor5 login" href="logout">LOG OUT
+							&nbsp; &nbsp;</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="modal fade" id="LoginModal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Login Here</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<form id="loginform" action="authenticateUser" method="POST"
+							onsubmit="return checkLogin()">
+							<div class="form-group row">
+								<label for="InputEmail1" class="col-4 col-form-label">Username*</label>
+								<div class="col-8">
+									<input class="form-control" name="userID" id="InputEmail1"
+										maxlength="50" type="text" type="hidden"
+										aria-describedby="emailHelp" placeholder="Enter Username"
+										required>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="InputPassword1" class="col-4 col-form-label">Password*</label>
+								<div class="col-8">
+									<input class="form-control" name="password" id="InputPassword1"
+										maxlength="30" type="password" autocomplete="new-password"
+										placeholder="Password" required>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="captchaCode" class="col-4 col-form-label prompt">
+									Retype the characters from the picture:</label>
+								<div class="col-8">
+									
+
+  <link type="text/css" rel="stylesheet" href="/botdetectcaptcha?get=layout-stylesheet&amp;t=1787743800" />
+  <div class="BDC_CaptchaDiv " id="exampleCaptcha_CaptchaDiv" style="width: 180px !important; height: 50px !important; "><!--
+ --><div class="BDC_CaptchaImageDiv" id="exampleCaptcha_CaptchaImageDiv" style="width: 150px !important; height: 50px !important;"><!--
+   --><div class="BDC_CaptchaImageDiv" style="width:150px; height:40px;"><img class="BDC_CaptchaImage" id="exampleCaptcha_CaptchaImage" src="/botdetectcaptcha?get=image&amp;c=exampleCaptcha&amp;t=4a2d9c2bbe704758a172c924441bd6fd" alt="Retype the CAPTCHA code from the image" style="" /></div><!--
+   --><a href="//captcha.org/captcha.html?java" title="BotDetect CAPTCHA Lib" style="display: block !important; height: 10px !important; margin: 0 !important; padding: 0 !important; font-size: 9px !important; line-height: 10px !important; visibility: visible !important; font-family: Verdana, DejaVu Sans, Bitstream Vera Sans, Verdana Ref, sans-serif !important; vertical-align: middle !important; text-align: center !important; text-decoration: none !important; background-color: #f8f8f8 !important; color: #606060 !important;">BotDetect CAPTCHA Lib</a><!--
+ --></div><!--
+ --><div class="BDC_CaptchaIconsDiv" id="exampleCaptcha_CaptchaIconsDiv" style="width: 24px !important;"><!--
+   --><a class="BDC_ReloadLink" id="exampleCaptcha_ReloadLink" href="#" title="Change the CAPTCHA code"><img class="BDC_ReloadIcon" id="exampleCaptcha_ReloadIcon" src="/botdetectcaptcha?get=reload-icon" alt="Change the CAPTCHA code" /></a><!--
+   --><a rel="nofollow" class="BDC_SoundLink" id="exampleCaptcha_SoundLink" href="/botdetectcaptcha?get=sound&amp;c=exampleCaptcha&amp;t=4a2d9c2bbe704758a172c924441bd6fd" title="Speak the CAPTCHA code"><img class="BDC_SoundIcon" id="exampleCaptcha_SoundIcon" src="/botdetectcaptcha?get=sound-icon" alt="Speak the CAPTCHA code" /></a><!--
+   --><div class="BDC_Placeholder" id="exampleCaptcha_AudioPlaceholder">&amp;nbsp;</div><!-- --></div>
+   <script src="/botdetectcaptcha?get=script-include&amp;t=1787744956" type="text/javascript"></script>
+   <script src="/botdetectcaptcha?get=init-script-include&amp;c=exampleCaptcha&amp;t=4a2d9c2bbe704758a172c924441bd6fd" type="text/javascript"></script>
+   <input type="hidden" id="BDC_VCID_exampleCaptcha" name="BDC_VCID_exampleCaptcha" value="4a2d9c2bbe704758a172c924441bd6fd" />
+   <input type="hidden" id="BDC_BackWorkaround_exampleCaptcha" name="BDC_BackWorkaround_exampleCaptcha" value="0" />
+   <input type="hidden" id="BDC_Hs_exampleCaptcha" name="BDC_Hs_exampleCaptcha" value="b81b977fafbef78c622773a29e7d9f982cce5aab" />
+   <input type="hidden" id="BDC_SP_exampleCaptcha" name="BDC_SP_exampleCaptcha" value="1491427538" />
+
+  </div>
+
+									<div class="col-8">
+										<input class="form-control" id="captchaCode" type="text"
+											name="captchaCode" />
+									</div>
+								</div>
+							</div>
+
+							<div class="col-8 mx-auto">
+								<input type="submit" class="btn btn-primary btn-block homepage5"
+									id="checkloginbutton" value="Login" />
+							</div>
+						</form>
+						<div class="text-center" style="margin-top: 10px">
+                                <h5 class="text-warning"><b>OR</b></h5>
+                                <!-- <h6 class="text-success"><b><i>Note :TEC officials, Login with gov mail id through parichay </i></b> </h6> -->
+                            </div>
+
+                            <div>
+                               <!--  <form id="loginParichayform" action="loginViaParichay" method="POST">
+
+                                    <div class="col-8 mx-auto">
+                                        <input type="submit" id="checkloginbuttonParichay"
+                                               class="btn btn-primary btn-block homepage5" value="LoginViaParichay" />
+                                    </div>
+                                </form> -->
+                                
+                                
+                                <form id="loginParichayform" action="/ssoLogin" method="GET">
+
+								<div class="col-8 mx-auto">
+									<input type="submit" id="checkloginbuttonParichay"
+										class="btn btn-primary btn-block homepage5"
+										value="Login with JanParichay" />
+								</div>
+							</form>
+
+                            </div>
+                            <div class="text-center mx-auto">
+                                <a class="small"  href="filedownload?name=downloadDocument_MTCTEinstructions.pdf"> Download MTCTE User Instructions</a> <br>                               
+                                <a class="small"  href="filedownload?name=downloadDocument_MTCTEProcedure.pdf"> Download Amended MTCTE Procedure v3.0 (TEC 93009:2024)</a> <br>
+                                <a class="small" href="register">Register an Account</a> <br>
+                                <a class="small" href="forgot-password">Forgot Password?</a>
+                            </div> 
+                                                
+                                             <!--   <div class="text-center mx-auto">
+                                                    <a class="small"  href="filedownload?name=downloadDocument_MTCTEinstructions.pdf"> Download MTCTE User Instructions</a> <br>
+                               <a class="small"  href="filedownload?name=downloadDocument_MTCTEProcedure.pdf"> Download MTCTE Procedure</a> <br>
+                                                  
+							<a class="small" href="register">Register an Account</a> <br>
+							<a class="small" href="forgot-password">Forgot Password?</a>
+						</div>-->
+					</div>
+					<div align="center" class="homepagefontcolor"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="/resources/newjs/hash.js"></script>
+		<script
+			src="/resources/newjs/CryptoJS-GoogleCode/rollups/aes.js"></script>
+		<script
+			src="/resources/newjs/CryptoJS-GoogleCode/rollups/sha256.js"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- jQuery UI CSS -->
+		<link rel="stylesheet"
+			href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+		<!-- jQuery UI JS -->
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		    try {
+		        // 1. Create a URLSearchParams object from the current window location
+		        var urlParams = new URLSearchParams(window.location.search);
+		        // 2. Check if the 'embed' parameter equals 'true'
+		        if (urlParams.get('embed') === 'true') {
+		        	<!--console.log("Embedded mode detected via URL parameter. Hiding UI.");-->
+		            // Hide navigation, masthead, and footer elements
+		            $("#top_bar, #masthead, #mainNav").hide();
+		            $(".footerCont1, .footerCont").hide();
+		        } else {
+		            console.log("Standard display mode. Navigation visible.");
+		        }
+		    } catch (e) {
+		        console.warn("Query parameter detection failed:", e);
+		    }
+		});
+		</script>
+
+
+<div class="wrapper" id="skipCont"></div>
+
+<div class="content-wrapper col-sm-10 mx-auto homepage1">
+	<div class="container-fluid">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">Home</li>
+			<li class="breadcrumb-item active">About MTCTE</li>
+		</ol>
+
+		<div id="demo0" class="card mx-auto main-content" align="justify">
+			<div class="card-header main-content-header">
+				<h6>About MTCTE (Mandatory Testing & Certification Of
+					Telecommunication Equipment)</h6>
+			</div>
+
+			<div class="card-body main-content-body">
+				<p>Telecommunications (Framework to Notify Standards, Conformity
+					Assessment and Certification) Rules, 2025 prescribes for Mandatory
+					Testing and Certification of Telecommunication Equipment. No
+					telecommunication equipment notified under MTCTE shall be sold or
+					deployed in any telecommunication network, or otherwise be used in
+					India, unless it has a valid Certificate of Conformity Assessment
+					as per the prescribed standards (Essential Requirements).</p>
+
+				<br> <strong>Objectives of MTCTE</strong>
+				<ul>
+					<li>That any telecom equipment does not degrade performance of
+						existing network to which it is connected.</li>
+					<li>Safety of the end–users.</li>
+					<li>Protection of users and general public by ensuring that
+						radio frequency emissions from equipment do not exceed prescribed
+						standards.</li>
+					<li>That telecom equipment complies with the relevant national
+						and international regulatory standards and requirements.</li>
+				</ul>
+
+				<p>
+					The testing and certification envisaged in <a
+						href="filedownload?name=downloadDocument_MTCTEProcedure.pdf">
+						MTCTE Procedure (TEC 93009:2024) </a> ensures that the equipment meets
+					the TEC prescribed Essential Requirements.
+				</p>
+
+				<p>
+					<a href="filedownload?name=downloadDocument_final_mtcte_flow.pdf">Click
+						here</a> to download the flowchart for profile registration and fresh
+					application under MTCTE.
+				</p>
+
+				<p>
+					<a href="filedownload?name=downloadDocument_MTCTEinstructions.pdf">Click
+						here</a> to download MTCTE User Instructions.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    
+</script>
+
+<div class="footerCont">
+	<div class="homepagejustifydisplay">
+		<ul class="footerLinks ">
+		<li><a class="color-me font14" href="access_help">Accessibility
+                                &amp; Help</a></li>	
+                    <li><a class="color-me font14" href="terms_cndtn">Terms
+					&amp; Conditions</a></li>
+
+			<li><a class="color-me font14" href="website_policy">Website
+					Policy</a></li>
+			<li><a class="color-me font14" href="Sitemap">Sitemap</a></li>
+			<li><a class="color-me font14" href="feedback"> Feedback</a></li>
+		</ul>
+	</div>
+	<div class="color-me lineage">
+		<p>� Content Owned by Telecommunication ENGINEERING CENTRE,
+			Government of India.</p>
+	</div>
+     <div class="stqc-logo">
+                        <a target="_blank" title="STQC Certificate" href="filedownload?name=downloadDocument_securityAudit.pdf">
+                        <img src="/images/STQC.jpeg" alt="STQC Certificate" >
+                        </a>
+                   </div>
+                    <div class="stqc-logo1">
+                        <a target="_blank" title="WCAG Certificate" href="filedownload?name=downloadDocument_gigw.pdf">
+                            <img src="/images/cqw_logo.png" alt="WCAG Certificate">
+                        </a>
+                    </div> 
+</div>
+<script src="/resources/vendor/jquery/jquery-3.7.1.min.js"></script>
+<script
+	src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous"
+	></script>
+<script nonce="6eee0b71-3ac2-4042-a082-3589c2306b13"
+	src="/resources/newjs/polyfill1_0.js?ver=2.12.113"></script>
+
+<script
+	src="/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+<script
+	src="/resources/vendor/datatables/jquery.dataTables.js"></script>
+<script
+	src="/resources/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+<script src="/resources/js/sb-admin.min.js"></script>
+<script src="/resources/js/sb-admin-datatables.min.js"></script>
+<script
+	src="/resources/newjs/checkinput.js?ver=2.12.113"></script>
+
+<script src="/resources/vendor/chart.js/Chart.min.js"></script>
+<script
+	src="/resources/newjs/loginlogoutcheck.js?ver=2.12.113"></script>
+
+<script nonce="6eee0b71-3ac2-4042-a082-3589c2306b13">
+
+// $( document ).ready(function() {
+//     console.log( "ready!" );
+    loginLogoutToggleOnHomepage();
+// });
+</script>
+</body>
+</html>
