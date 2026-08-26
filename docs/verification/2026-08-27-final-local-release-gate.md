@@ -31,7 +31,8 @@ Release-workspace privacy packaging: **not green** because the developer workspa
 | Demo video | PASS — 93.4 seconds, 1280×720, opening/middle/closing frames sampled |
 | Official URLs | PASS at low concurrency — 92/92 resolved; seven official PDFs returned accepted access-controlled 403 responses |
 | Production dependency audit | PASS — no known high-severity production vulnerabilities |
-| Diff hygiene | PASS — `git diff --check` |
+| Working-tree hygiene | PASS — no staged or unstaged release change remained after the final commit |
+| Commit-range whitespace audit | DISCLOSED — captured official HTML preserves source CRLF/trailing bytes, and milestone Markdown contains intentional hard line breaks |
 | Design lint | PASS — Impeccable detector returned no findings for the changed chat UI and browser test |
 | Privacy workspace scan | EXPECTED FAIL — only `.env` and `.env.local` presence; 98 text files scanned and no production upload fixture or recorded extraction admitted |
 
