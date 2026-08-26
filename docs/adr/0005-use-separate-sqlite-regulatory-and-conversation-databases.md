@@ -1,0 +1,3 @@
+# Use separate local SQLite stores on Node 24+
+
+The local implementation will use server-only `node:sqlite` on Node 24 or newer for `regulatory.db`, `conversations.db`, and `learning.db`, with schema migrations and prepared statements behind data-access interfaces. This avoids a Neo4j service, Docker dependency, native third-party driver, credentials, and extra runtime port while keeping regulatory evidence, ordinary user memory, and opted-in learning data physically separate. Operations remain bounded because the built-in API is synchronous, and the interfaces preserve a later database migration path without changing agent or tool contracts.

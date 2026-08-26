@@ -1,0 +1,3 @@
+# Use graph-first retrieval with live official research
+
+The assistant will query a provenance-backed Compliance Knowledge Graph first and invoke the Agents SDK hosted web-search tool with an official-domain registry when evidence is absent, stale, or conflicting. Search results are discovery candidates only: a separate Evidence Admission tool must snapshot and validate an official source before it can support a positive Compliance Assessment. An empty search result or an Unresolved Evidence Gap in either the Applicable-Agency Checklist or Coverage Manifest prevents a positive assessment while still allowing clearly scoped Research Guidance.

@@ -1,0 +1,3 @@
+# Stream progress but release regulatory claims only after validation
+
+The chat may stream typed activity events such as searching, checking, and calculating, but final factual compliance claims are rendered only after an Agents SDK output guardrail validates their structured claim blocks, cited source identifiers, locators, freshness, and scope. This prevents uncited prose from escaping before validation; requests are checked before streaming starts, later failures become typed in-stream error or incomplete events, and every accepted assessment stores the validated output with its immutable Assessment Snapshot.

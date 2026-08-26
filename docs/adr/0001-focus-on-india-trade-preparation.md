@@ -1,0 +1,3 @@
+# Focus the assistant on India import and export preparation
+
+The product will be one India Trade Compliance Assistant for commercial goods entering or leaving India, focused on pre-transaction, pre-shipment, and customs-clearance preparation. It may provide cited Research Guidance for any product, but may produce a Compliance Assessment or calculation only through explicit tools with all material facts and current official evidence; live shipment status, filings, payments, licence applications, and post-clearance disputes are excluded so the local-development phase can be complete without pretending to provide unsupported authority or integrations.

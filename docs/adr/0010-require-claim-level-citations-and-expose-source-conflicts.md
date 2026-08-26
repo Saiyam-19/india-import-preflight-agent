@@ -1,0 +1,3 @@
+# Require claim-level citations and expose source conflicts
+
+Every factual compliance claim must be emitted as a Validated Claim Block referencing admitted source identifiers and exact official locators, using legislation or gazette instruments before current competent-authority databases and then official rulings or guidance. An application output guardrail rejects unknown, absent, stale, or scope-mismatched citations before final regulatory prose is released. Secondary sources may aid discovery but cannot support an assessment; unresolved conflicts, inaccessible sources, stale evidence, and material translation ambiguity remain visible blockers.

@@ -1,0 +1,3 @@
+# Collect an opt-in learning dataset
+
+Persistent conversations will support normal agent memory, while a separate local Learning Dataset will contain only explicitly opted-in, redacted Learning Contributions together with an immutable consent event, schema and agent-version metadata, tool traces, citations, corrections, and Feedback Signals. The local phase collects evaluation and future-training material but does not silently upload data or update model weights. Users may delete ordinary conversations and withdraw a contribution before any future export or training action; such future actions require a new reviewed phase.

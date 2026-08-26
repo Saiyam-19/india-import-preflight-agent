@@ -1,0 +1,3 @@
+# Admit and snapshot evidence before positive use
+
+External pages, PDFs, uploads, translations, and search snippets are untrusted input. Official discoveries pass `discovered -> snapshotted -> extracted -> validated -> admitted`, preserving immutable bytes, hash, redirects, authority, instrument identity, amendment lineage, applicability, and exact locator. Provisional material may support labelled Research Guidance but cannot be silently promoted or support a positive assessment; retrieval blocks private networks and unsafe schemes, applies content limits, and never follows instructions embedded in source content.

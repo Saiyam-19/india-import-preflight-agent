@@ -1,0 +1,3 @@
+# Gate complete assessments on an explicit coverage manifest
+
+The assistant may discuss any product, but it may issue Assessment Complete Within Verified Scope only when a machine-readable Coverage Manifest covers every Regulatory Domain produced by the Applicable-Agency Checklist for that exact product, route, parties, use, and date. A supported country, a high-confidence model answer, or an unsuccessful web search is never sufficient. This keeps the requested any-product experience and UAE, China, and US modules while making uncovered regulators, subnational rules, connector failures, and product-specific gaps fail closed and visible.

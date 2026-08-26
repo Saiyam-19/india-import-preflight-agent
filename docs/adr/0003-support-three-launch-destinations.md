@@ -1,0 +1,3 @@
+# Support UAE, China, and the United States as launch destinations
+
+The first version will provide End-to-End Export Assessments for the United Arab Emirates, China, and the United States when the product-specific Coverage Manifest is complete and current. Each Destination Module covers national or federal border requirements plus admitted product-market-access domains; emirate, port, province, state, local, post-entry, and downstream obligations are included only when the Verified Assessment Scope names them. Other destinations and uncovered subnational domains remain eligible for clearly scoped Research Guidance, preserving broad usefulness without converting country selection into a false completeness promise.

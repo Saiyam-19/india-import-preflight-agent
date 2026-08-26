@@ -1,0 +1,3 @@
+# Allow evidence-gated working classifications
+
+The assistant may produce a non-binding Working Classification only when all material product facts are confirmed and a deterministic tool records the applicable General Rules for Interpretation, official tariff language, section and chapter notes, and reasons for excluding each plausible alternative heading. Model confidence is never sufficient. Multiple plausible headings remain Classification Candidates and prevent a positive Compliance Assessment; a competent authority's Binding Classification overrides the assistant within the ruling's scope.
