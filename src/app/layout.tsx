@@ -4,17 +4,17 @@ import type { ReactNode } from "react";
 import "./styles.css";
 
 const DIRECTION_CONTRACT = `<!--
-THESIS: An evidence ledger makes import uncertainty observable and refuses the generic marketing-page or dashboard arrangement.
-OWN-WORLD: Cloud canvas, dark ink, one trust-blue accent, square marks, sharp borders, native controls, and source-led audit rows.
-STORY: Describe the planned import, receive a documentation and compliance checklist, then verify evidence and rebuild the plan as facts become available.
-FIRST VIEWPORT: Service identity and privacy promise frame a plain-language planning headline, followed by three concrete deliverables and the guided intake.
+THESIS: A conversation-scoped evidence ledger makes shipment readiness inspectable and keeps unsupported conclusions visibly incomplete.
+OWN-WORLD: Cloud canvas, dark ink, one trust-blue accent, square marks, sharp borders, native controls, and citation-led chat records.
+STORY: Ask a natural India-China shipment question, let the assistant preserve facts and run explicit evidence-gated tools, then inspect the cited readiness result in the conversation.
+FIRST VIEWPORT: Case context, AI availability, the conversation, and official evidence are visible without a marketing preamble.
 FORM: Operate, evidence-ledger direction, seed key operate-evidence-ledger.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->`;
 
 export const metadata: Metadata = {
-  title: "India Import Preflight",
-  description: "A public import-planning assistant for documentation, duties, risks, and next steps for India-bound shipments.",
+  title: "India-China Trade Guidance",
+  description: "Case-scoped bilateral India-China Research Guidance and evidence-gated assessments with admitted official citations.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

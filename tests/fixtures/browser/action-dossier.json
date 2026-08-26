@@ -1,0 +1,178 @@
+{
+  "decision": {
+    "status": "pending",
+    "summary": "Do not place the router order until its radio, telecom, and product-scope facts are confirmed against admitted official evidence.",
+    "blockers": [
+      "The exact wireless frequency bands and transmit power are not confirmed.",
+      "BIS CRS and TEC MTCTE scope remain Pending until the exact model and statutory entries are matched."
+    ]
+  },
+  "orderedNextActions": [
+    {
+      "id": "confirm-radio-specifications",
+      "status": "required",
+      "label": "Confirm the radio specifications",
+      "action": "Obtain the model datasheet showing every frequency band and transmit-power value.",
+      "owner": "Supplier",
+      "why": "WPC applicability cannot be determined from the product name alone.",
+      "dueBefore": "Before purchase",
+      "policyLocators": [],
+      "filingPortals": []
+    },
+    {
+      "id": "confirm-statutory-scope",
+      "status": "pending",
+      "label": "Confirm BIS and TEC scope",
+      "action": "Match the exact model and confirmed functions to the admitted statutory entries.",
+      "owner": "Importer",
+      "why": "An unsupported schedule match cannot become a requirement.",
+      "dueBefore": "Before shipment",
+      "policyLocators": [],
+      "filingPortals": []
+    },
+    {
+      "id": "confirmed-commercial-purpose",
+      "status": "clear",
+      "label": "Use the confirmed commercial-import path",
+      "action": "Keep the confirmed commercial purpose attached to this case.",
+      "owner": "Importer",
+      "why": "The case-scoped purpose answer has already been confirmed.",
+      "dueBefore": "Before purchase",
+      "policyLocators": [],
+      "filingPortals": []
+    }
+  ],
+  "documents": [
+    {
+      "id": "commercial-invoice",
+      "status": "required",
+      "label": "Commercial invoice",
+      "action": "Prepare the supplier commercial invoice for the shipment record.",
+      "owner": "Supplier",
+      "why": "The import declaration requires shipment documents.",
+      "dueBefore": "Before customs filing",
+      "policyLocators": [],
+      "filingPortals": []
+    }
+  ],
+  "policyReview": [
+    {
+      "id": "dgft-import-policy",
+      "status": "required",
+      "label": "Review the DGFT import-policy entry",
+      "action": "Review the exact ITC (HS) import-policy locator after classification is confirmed.",
+      "owner": "Importer",
+      "why": "The applicable import policy depends on the supported classification.",
+      "policyLocators": [
+        {
+          "authority": "Directorate General of Foreign Trade",
+          "instrumentTitle": "ITC (HS) Import Policy",
+          "exactLocator": "Schedule I, Chapter 85, applicable eight-digit entry",
+          "canonicalUrl": "https://www.dgft.gov.in/CP/?opt=itchs-import-export",
+          "sourceVersionId": "dgft-itc-hs-current",
+          "verifiedAt": "2026-08-26T00:00:00.000Z",
+          "freshUntil": "2026-09-25T00:00:00.000Z"
+        },
+        {
+          "authority": "Wireless Planning & Coordination Wing",
+          "instrumentTitle": "Equipment Type Approval application process",
+          "exactLocator": "Application Process, paragraph 1",
+          "canonicalUrl": "https://www.eservices.dot.gov.in/equipment-type-approval-eta",
+          "sourceVersionId": "wpc-eta-process-current",
+          "verifiedAt": "2026-08-26T00:00:00.000Z",
+          "freshUntil": "2026-09-25T00:00:00.000Z"
+        }
+      ],
+      "filingPortals": []
+    }
+  ],
+  "onlineForms": [
+    {
+      "id": "esanchit-service",
+      "status": "required",
+      "label": "Prepare for eSANCHIT document submission",
+      "action": "Have the importer or customs broker upload the required documents after authenticated access.",
+      "owner": "Customs broker",
+      "why": "The app does not log in or upload documents.",
+      "policyLocators": [],
+      "filingPortals": [
+        {
+          "authority": "ICEGATE",
+          "serviceName": { "value": "eSANCHIT", "claimId": "kg:esanchit:serviceName", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT service page" },
+          "canonicalUrl": { "value": "https://www.icegate.gov.in/services/e-sanchit", "claimId": "kg:esanchit:canonicalUrl", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT service page" },
+          "access": { "value": "login_required", "claimId": "kg:esanchit:access", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "Registered-user access" },
+          "filer": { "value": "Importer or customs broker", "claimId": "kg:esanchit:filer", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "Registered-user access" },
+          "loginRequirement": { "value": "Registered ICEGATE user", "claimId": "kg:esanchit:loginRequirement", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "Registered-user access" },
+          "requiredDocuments": [
+            { "value": "Commercial Invoice cum Packing List", "claimId": "kg:esanchit:invoice", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT document list" },
+            { "value": "Transport document", "claimId": "kg:esanchit:transport", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT document list" }
+          ],
+          "fee": { "value": "No separate upload fee stated", "claimId": "kg:esanchit:fee", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT service page" },
+          "deadline": { "value": "Before filing the Bill of Entry", "claimId": "kg:esanchit:deadline", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT filing sequence" },
+          "sequence": { "value": 1, "claimId": "kg:esanchit:sequence", "sourceVersionId": "icegate-esanchit-current", "exactLocator": "eSANCHIT filing sequence" },
+          "unresolvedFields": [],
+          "policyLocators": []
+        },
+        {
+          "authority": "Test authority pending verification",
+          "serviceName": { "value": "Test-only Pending Filing Service", "claimId": "fixture:pending:serviceName", "sourceVersionId": "fixture-only", "exactLocator": "Fixture portal name" },
+          "canonicalUrl": { "value": "https://example.test/pending-filing", "claimId": "fixture:pending:canonicalUrl", "sourceVersionId": "fixture-only", "exactLocator": "Fixture portal URL" },
+          "requiredDocuments": [],
+          "unresolvedFields": ["access mode", "responsible filer", "login requirements", "documents uploaded there", "submission sequence", "fee and deadline"],
+          "policyLocators": []
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "id": "wpc-contact",
+      "status": "clear",
+      "label": "Wireless Planning & Coordination Wing official contact",
+      "action": "Use this contact only for technical support of the portal functionalities.",
+      "owner": "Importer",
+      "why": "Current admitted evidence supports this bounded contact value.",
+      "contact": {
+        "channel": "phone",
+        "value": {
+          "value": "011-23350020",
+          "claimId": "kg:contact-wpc:value",
+          "sourceVersionId": "wpc-contact-current",
+          "exactLocator": "technical support of the portal funcionalidades"
+        },
+        "purpose": {
+          "value": "technical support of the portal functionalities",
+          "claimId": "kg:contact-wpc:purpose",
+          "sourceVersionId": "wpc-contact-current",
+          "exactLocator": "technical support of the portal funcionalidades"
+        }
+      },
+      "policyLocators": [],
+      "filingPortals": []
+    }
+  ],
+  "classificationAndRegulation": [
+    {
+      "id": "itc-hs-classification",
+      "status": "pending",
+      "label": "Confirm the ITC (HS) classification",
+      "action": "Resolve the eight-digit classification from the principal function and technical facts.",
+      "owner": "Customs broker",
+      "why": "The product name cannot establish classification.",
+      "policyLocators": [],
+      "filingPortals": []
+    }
+  ],
+  "costs": [
+    {
+      "id": "landed-cost-inputs",
+      "status": "pending",
+      "label": "Complete the landed-cost inputs",
+      "action": "Confirm classification, assessable value, freight, insurance, and applicable rates.",
+      "owner": "Importer",
+      "why": "No border-charge total is released while those inputs remain unresolved.",
+      "policyLocators": [],
+      "filingPortals": []
+    }
+  ]
+}
