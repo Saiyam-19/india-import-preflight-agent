@@ -1,8 +1,10 @@
 # India Import Preflight Agent PRD
 
-Status: Adversarially approved multi-product scope  
+Status: **Superseded on 25 August 2026** by `2026-08-25-agent-first-trade-compliance-shared-understanding.md`
 Date: 24 August 2026  
 Primary deadline: 28 August 2026, 8:00 PM IST
+
+This document remains as historical context for the form-first import prototype. It is not the active product or implementation plan.
 
 ## Core Promise
 

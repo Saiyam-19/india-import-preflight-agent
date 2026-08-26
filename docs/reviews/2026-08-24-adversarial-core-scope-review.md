@@ -1,7 +1,9 @@
 # Adversarial Core-Scope Review
 
 Date: 24 August 2026  
-Final verdict: **APPROVED**
+Final verdict: **SUPERSEDED** by `2026-08-25-agent-first-trade-compliance-adversarial-review.md`
+
+This review remains as historical evidence for the prior fixed-product import prototype. Its approval does not apply to the agent-first import/export plan.
 
 ## Immutable Review Question
 
