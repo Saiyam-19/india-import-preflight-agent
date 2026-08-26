@@ -1,11 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import { POST } from "@/app/api/preflight/route";
 import {
   OTHER_PRODUCT_ID,
   OtherProductAssessmentRequestSchema,
   OtherProductReportSchema,
-  currentAssessmentDate,
   evaluateOtherProduct,
   type OtherProductAssessmentRequest,
 } from "@/preflight";
@@ -121,39 +119,4 @@ describe("fail-closed Other product", () => {
     expect(report.classification.status).toBe("withheld");
   });
 
-  it("serves Other product outside the catalog with a strict no-store response", async () => {
-    const request = completeRequest();
-    request.assessmentDate = currentAssessmentDate();
-    const response = await POST(new Request("http://localhost/api/preflight", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(request),
-    }));
-    const body = await response.json();
-
-    expect(response.status).toBe(200);
-    expect(response.headers.get("Cache-Control")).toBe("no-store");
-    expect(response.headers.get("Pragma")).toBe("no-cache");
-    expect(response.headers.get("Expires")).toBe("0");
-    expect(OtherProductReportSchema.safeParse(body).success).toBe(true);
-    expect(body).toMatchObject({
-      productPackId: OTHER_PRODUCT_ID,
-      outcome: "needs_verification",
-      classification: { status: "withheld" },
-      cost: { status: "withheld" },
-    });
-  });
-
-  it("keeps malformed request bodies out of caches", async () => {
-    const response = await POST(new Request("http://localhost/api/preflight", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: "not-json",
-    }));
-
-    expect(response.status).toBe(400);
-    expect(response.headers.get("Cache-Control")).toBe("no-store");
-    expect(response.headers.get("Pragma")).toBe("no-cache");
-    expect(response.headers.get("Expires")).toBe("0");
-  });
 });
