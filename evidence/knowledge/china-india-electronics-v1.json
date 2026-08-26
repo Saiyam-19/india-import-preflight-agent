@@ -1,0 +1,1422 @@
+{
+  "schemaVersion": 1,
+  "graphId": "china-india-electronics-v1",
+  "admissions": [
+    {
+      "evidence": {
+        "admissionId": "346b56bb-56c8-4a9c-8560-71d9a38f6a7e",
+        "applicability": {
+          "appliesIn": "India",
+          "tradeDirection": "china_to_india",
+          "productScope": "official service metadata only",
+          "regulatoryDomain": "service metadata"
+        },
+        "applicabilityEvidence": {
+          "locator": {
+            "kind": "section",
+            "value": "Equipment Type Approval (ETA)"
+          },
+          "exactExcerpt": "Equipment Type Approval (ETA) is a certification issued by the Wireless Planning & Coordination (WPC) Wing of the Department of Telecommunications (DoT), Government of India."
+        },
+        "authorityName": "Wireless Planning & Coordination (WPC) Wing",
+        "connectorId": "india-official-web",
+        "contentType": "text/html",
+        "documentVersionId": "india-official-web-d3924d2d505610ca",
+        "effectiveFrom": "2026-08-26",
+        "exactLocator": {
+          "kind": "section",
+          "value": "Equipment Type Approval (ETA)"
+        },
+        "finalUrl": "https://www.eservices.dot.gov.in/equipment-type-approval-eta",
+        "freshUntil": "2026-09-25",
+        "instrumentId": "equipment-type-approval-eta",
+        "instrumentTitle": "Equipment Type Approval (ETA)",
+        "identityEvidence": {
+          "authority": {
+            "locator": {
+              "kind": "section",
+              "value": "Equipment Type Approval (ETA)"
+            },
+            "exactExcerpt": "Wireless Planning & Coordination (WPC) Wing"
+          },
+          "instrumentId": {
+            "locator": {
+              "kind": "section",
+              "value": "Equipment Type Approval (ETA)"
+            },
+            "exactExcerpt": "Equipment Type Approval (ETA)"
+          },
+          "instrumentTitle": {
+            "locator": {
+              "kind": "section",
+              "value": "Equipment Type Approval (ETA)"
+            },
+            "exactExcerpt": "Equipment Type Approval (ETA)"
+          }
+        },
+        "jurisdiction": "India",
+        "originalLanguage": "en",
+        "promptInjectionDetected": false,
+        "redirectHistory": [],
+        "sha256": "d3924d2d505610ca7b41e2798640d71251612819802882d59c783b7b06bdf621",
+        "snapshotRelativePath": "evidence/official/electronics-v1/d3924d2d505610ca7b41e2798640d71251612819802882d59c783b7b06bdf621/source.html",
+        "sourceVersionId": "india-official-web-d3924d2d505610ca-11dbdf0d36",
+        "state": "admitted",
+        "translation": {
+          "status": "authoritative_original",
+          "method": "Official English publication",
+          "materialAmbiguity": false
+        },
+        "transitions": [
+          {
+            "state": "discovered",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "snapshotted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "extracted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "validated",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "admitted",
+            "at": "2026-08-26T10:30:00.000Z"
+          }
+        ]
+      },
+      "amendment": {
+        "status": "original",
+        "note": "Immutable retrieval of current official metadata on 2026-08-26; no legal effectivity is asserted."
+      },
+      "exactExcerpt": "Equipment Type Approval (ETA) is a certification issued by the Wireless Planning & Coordination (WPC) Wing of the Department of Telecommunications (DoT), Government of India."
+    },
+    {
+      "evidence": {
+        "admissionId": "565723f6-a6ff-4de7-8869-e40ace4f4ebb",
+        "applicability": {
+          "appliesIn": "India",
+          "tradeDirection": "china_to_india",
+          "productScope": "official service metadata only",
+          "regulatoryDomain": "service metadata"
+        },
+        "applicabilityEvidence": {
+          "locator": {
+            "kind": "section",
+            "value": "License Issuance & Management (Saral Sanchar)"
+          },
+          "exactExcerpt": "License Issuance & Management (Saral Sanchar)"
+        },
+        "authorityName": "Saral Sanchar",
+        "connectorId": "india-official-web",
+        "contentType": "text/html",
+        "documentVersionId": "india-official-web-d3924d2d505610ca",
+        "effectiveFrom": "2026-08-26",
+        "exactLocator": {
+          "kind": "section",
+          "value": "License Issuance & Management (Saral Sanchar)"
+        },
+        "finalUrl": "https://www.eservices.dot.gov.in/equipment-type-approval-eta",
+        "freshUntil": "2026-09-25",
+        "instrumentId": "saral-sanchar",
+        "instrumentTitle": "License Issuance & Management (Saral Sanchar)",
+        "identityEvidence": {
+          "authority": {
+            "locator": {
+              "kind": "section",
+              "value": "License Issuance & Management (Saral Sanchar)"
+            },
+            "exactExcerpt": "Saral Sanchar"
+          },
+          "instrumentId": {
+            "locator": {
+              "kind": "section",
+              "value": "License Issuance & Management (Saral Sanchar)"
+            },
+            "exactExcerpt": "Saral Sanchar"
+          },
+          "instrumentTitle": {
+            "locator": {
+              "kind": "section",
+              "value": "License Issuance & Management (Saral Sanchar)"
+            },
+            "exactExcerpt": "License Issuance & Management (Saral Sanchar)"
+          }
+        },
+        "jurisdiction": "India",
+        "originalLanguage": "en",
+        "promptInjectionDetected": false,
+        "redirectHistory": [],
+        "sha256": "d3924d2d505610ca7b41e2798640d71251612819802882d59c783b7b06bdf621",
+        "snapshotRelativePath": "evidence/official/electronics-v1/d3924d2d505610ca7b41e2798640d71251612819802882d59c783b7b06bdf621/source.html",
+        "sourceVersionId": "india-official-web-d3924d2d505610ca-1f430c6b92",
+        "state": "admitted",
+        "translation": {
+          "status": "authoritative_original",
+          "method": "Official English publication",
+          "materialAmbiguity": false
+        },
+        "transitions": [
+          {
+            "state": "discovered",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "snapshotted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "extracted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "validated",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "admitted",
+            "at": "2026-08-26T10:30:00.000Z"
+          }
+        ]
+      },
+      "amendment": {
+        "status": "original",
+        "note": "Immutable retrieval of current official metadata on 2026-08-26; no legal effectivity is asserted."
+      },
+      "exactExcerpt": "License Issuance & Management (Saral Sanchar)"
+    },
+    {
+      "evidence": {
+        "admissionId": "395d0bad-53b0-4d13-8300-1a8ecf2bc218",
+        "applicability": {
+          "appliesIn": "India",
+          "tradeDirection": "china_to_india",
+          "productScope": "official service metadata only",
+          "regulatoryDomain": "service metadata"
+        },
+        "applicabilityEvidence": {
+          "locator": {
+            "kind": "section",
+            "value": "Application Process"
+          },
+          "exactExcerpt": "Application Process 1 Submit application saral sanchar portal"
+        },
+        "authorityName": "Saral Sanchar portal",
+        "connectorId": "india-official-web",
+        "contentType": "text/html",
+        "documentVersionId": "india-official-web-e5dafb6c61d5ad1b",
+        "effectiveFrom": "2026-08-26",
+        "exactLocator": {
+          "kind": "section",
+          "value": "Application Process"
+        },
+        "finalUrl": "https://www.eservices.dot.gov.in/equipment-type-approval-eta",
+        "freshUntil": "2026-09-25",
+        "instrumentId": "Submit application",
+        "instrumentTitle": "Application Process",
+        "identityEvidence": {
+          "authority": {
+            "locator": {
+              "kind": "section",
+              "value": "Application Process"
+            },
+            "exactExcerpt": "saral sanchar portal"
+          },
+          "instrumentId": {
+            "locator": {
+              "kind": "section",
+              "value": "Application Process"
+            },
+            "exactExcerpt": "Submit application"
+          },
+          "instrumentTitle": {
+            "locator": {
+              "kind": "section",
+              "value": "Application Process"
+            },
+            "exactExcerpt": "Application Process"
+          }
+        },
+        "jurisdiction": "India",
+        "originalLanguage": "en",
+        "promptInjectionDetected": false,
+        "redirectHistory": [],
+        "sha256": "e5dafb6c61d5ad1bb9411a329a59ecefee287ce092dcd591ecabfa00e72c8f70",
+        "snapshotRelativePath": "evidence/official/electronics-v1/e5dafb6c61d5ad1bb9411a329a59ecefee287ce092dcd591ecabfa00e72c8f70/source.html",
+        "sourceVersionId": "india-official-web-e5dafb6c61d5ad1b-17902ed50e",
+        "state": "admitted",
+        "translation": {
+          "status": "authoritative_original",
+          "method": "Official English publication",
+          "materialAmbiguity": false
+        },
+        "transitions": [
+          {
+            "state": "discovered",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "snapshotted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "extracted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "validated",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "admitted",
+            "at": "2026-08-26T10:30:00.000Z"
+          }
+        ]
+      },
+      "amendment": {
+        "status": "original",
+        "note": "Immutable retrieval of current official metadata on 2026-08-26; no legal effectivity is asserted."
+      },
+      "exactExcerpt": "Application Process 1 Submit application saral sanchar portal"
+    },
+    {
+      "evidence": {
+        "admissionId": "41eb5fbe-b7b0-4fba-b0fa-23024df4f402",
+        "applicability": {
+          "appliesIn": "India",
+          "tradeDirection": "china_to_india",
+          "productScope": "official contact metadata only",
+          "regulatoryDomain": "contact metadata"
+        },
+        "applicabilityEvidence": {
+          "locator": {
+            "kind": "paragraph",
+            "value": "technical support of the portal funcionalities"
+          },
+          "exactExcerpt": "For any technical support of the portal funcionalities, Please contact on 011-23350020 ,011-23350025 or please drop the ticket in the portal."
+        },
+        "authorityName": "Department of Telecommunications",
+        "connectorId": "india-official-web",
+        "contentType": "text/html",
+        "documentVersionId": "india-official-web-97edcabf0e9b74ee",
+        "effectiveFrom": "2026-08-26",
+        "exactLocator": {
+          "kind": "paragraph",
+          "value": "technical support of the portal funcionalities"
+        },
+        "finalUrl": "https://eservices.dot.gov.in/saral/contact-us",
+        "freshUntil": "2026-09-25",
+        "instrumentId": "saral/contact-us",
+        "instrumentTitle": "technical support of the portal funcionalities",
+        "identityEvidence": {
+          "authority": {
+            "locator": {
+              "kind": "paragraph",
+              "value": "technical support of the portal funcionalities"
+            },
+            "exactExcerpt": "technical support of the portal funcionalities"
+          },
+          "instrumentId": {
+            "locator": {
+              "kind": "paragraph",
+              "value": "technical support of the portal funcionalities"
+            },
+            "exactExcerpt": "technical support of the portal funcionalities"
+          },
+          "instrumentTitle": {
+            "locator": {
+              "kind": "paragraph",
+              "value": "technical support of the portal funcionalities"
+            },
+            "exactExcerpt": "technical support of the portal funcionalities"
+          }
+        },
+        "jurisdiction": "India",
+        "originalLanguage": "en",
+        "promptInjectionDetected": false,
+        "redirectHistory": [],
+        "sha256": "97edcabf0e9b74eeea0008b0d0a50be4e557232e40b202c4a563997c68e78407",
+        "snapshotRelativePath": "evidence/official/electronics-v1/97edcabf0e9b74eeea0008b0d0a50be4e557232e40b202c4a563997c68e78407/source.html",
+        "sourceVersionId": "india-official-web-97edcabf0e9b74ee-77501d767d",
+        "state": "admitted",
+        "translation": {
+          "status": "authoritative_original",
+          "method": "Official English publication",
+          "materialAmbiguity": false
+        },
+        "transitions": [
+          {
+            "state": "discovered",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "snapshotted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "extracted",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "validated",
+            "at": "2026-08-26T10:30:00.000Z"
+          },
+          {
+            "state": "admitted",
+            "at": "2026-08-26T10:30:00.000Z"
+          }
+        ]
+      },
+      "amendment": {
+        "status": "original",
+        "note": "Immutable retrieval of current official metadata on 2026-08-26; no legal effectivity is asserted."
+      },
+      "exactExcerpt": "For any technical support of the portal funcionalities, Please contact on 011-23350020 ,011-23350025 or please drop the ticket in the portal."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "characteristic-product-form",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "product.form",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "product.form"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-product-condition",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "product.condition",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "product.condition"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-purchase-stage",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "purchase.stage",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "purchase.stage"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-import-purpose",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "import.purpose",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "import.purpose"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-packaging-retail_prepackaged",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "packaging.retail_prepackaged",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "packaging.retail_prepackaged"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-radio-transmitter_present",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "radio.transmitter_present",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "radio.transmitter_present"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-radio-frequency_hz",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "radio.frequency_hz",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "radio.frequency_hz"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-radio-transmit_power_w",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "radio.transmit_power_w",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "radio.transmit_power_w"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-telecom-public_network_connection",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "telecom.public_network_connection",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "telecom.public_network_connection"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-telecom-interface",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "telecom.interface",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "telecom.interface"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-battery-present",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "battery.present",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "battery.present"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-battery-chemistry",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "battery.chemistry",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "battery.chemistry"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-battery-capacity_ah",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "battery.capacity_ah",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "battery.capacity_ah"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-battery-voltage_v",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "battery.voltage_v",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "battery.voltage_v"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-power-external_supply_present",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "power.external_supply_present",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "power.external_supply_present"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-power-input_voltage_v",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "power.input_voltage_v",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "power.input_voltage_v"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-power-rated_output_w",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "power.rated_output_w",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "power.rated_output_w"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-camera-present",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "camera.present",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "camera.present"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-encryption-present",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "encryption.present",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "encryption.present"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-end_use-controlled_or_dual_use",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "end_use.controlled_or_dual_use",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "end_use.controlled_or_dual_use"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-classification-itc_hs",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "classification.itc_hs",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "classification.itc_hs"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-classification-bis_entry",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "classification.bis_entry",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "classification.bis_entry"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-classification-tec_entry",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "classification.tec_entry",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "classification.tec_entry"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic-classification-wpc_entry",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "classification.wpc_entry",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "characteristicId": "classification.wpc_entry"
+      },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "agency-dgft",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Directorate General of Foreign Trade",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityName": "Directorate General of Foreign Trade",
+        "role": "licensing"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Authority routing is retained, but no legal conclusion is exposed without an admitted current source.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-dgft"
+    },
+    {
+      "id": "contact-dgft",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Directorate General of Foreign Trade official contact",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityNodeId": "agency-dgft",
+        "channel": "official_web",
+        "value": "https://www.dgft.gov.in/CP/",
+        "purpose": "Directorate General of Foreign Trade verification"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The contact route was checked but could not pass field-level admission in this capture.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-dgft"
+    },
+    {
+      "id": "agency-customs",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Indian Customs Electronic Gateway",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityName": "Indian Customs Electronic Gateway",
+        "role": "customs"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Authority routing is retained, but no legal conclusion is exposed without an admitted current source.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-customs"
+    },
+    {
+      "id": "contact-customs",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Indian Customs Electronic Gateway official contact",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityNodeId": "agency-customs",
+        "channel": "official_web",
+        "value": "https://www.icegate.gov.in/contact_us",
+        "purpose": "Indian Customs Electronic Gateway verification"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The contact route was checked but could not pass field-level admission in this capture.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-customs"
+    },
+    {
+      "id": "agency-wpc",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Wireless Planning & Coordination (WPC) Wing",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "payload": {
+        "authorityName": "Wireless Planning & Coordination (WPC) Wing",
+        "role": "telecom"
+      },
+      "fieldEvidence": {
+        "authorityName": {
+          "claimId": "kg:agency-wpc:authorityName",
+          "sourceVersionId": "india-official-web-d3924d2d505610ca-11dbdf0d36",
+          "exactLocator": "Equipment Type Approval (ETA)",
+          "supportMode": "exact_text",
+          "supportText": "Equipment Type Approval (ETA) is a certification issued by the Wireless Planning & Coordination (WPC) Wing of the Department of Telecommunications (DoT), Government of India.",
+          "supportSha256": "f349b609a4ad699bb20c19298c8240c769cd8f8d87c4d788854fe303a85f413f"
+        },
+        "role": {
+          "claimId": "kg:agency-wpc:role",
+          "sourceVersionId": "india-official-web-d3924d2d505610ca-11dbdf0d36",
+          "exactLocator": "Equipment Type Approval (ETA)",
+          "supportMode": "closed_enum",
+          "supportText": "Equipment Type Approval (ETA) is a certification issued by the Wireless Planning & Coordination (WPC) Wing of the Department of Telecommunications (DoT), Government of India.",
+          "supportSha256": "f349b609a4ad699bb20c19298c8240c769cd8f8d87c4d788854fe303a85f413f"
+        }
+      },
+      "contactNodeId": "contact-wpc"
+    },
+    {
+      "id": "contact-wpc",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Wireless Planning & Coordination (WPC) Wing official contact",
+      "aliases": [],
+      "state": "actionable",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "payload": {
+        "authorityNodeId": "agency-wpc",
+        "channel": "phone",
+        "value": "011-23350020",
+        "purpose": "technical support of the portal funcionalities"
+      },
+      "fieldEvidence": {
+        "value": {
+          "claimId": "kg:contact-wpc:value",
+          "sourceVersionId": "india-official-web-97edcabf0e9b74ee-77501d767d",
+          "exactLocator": "technical support of the portal funcionalities",
+          "supportMode": "exact_text",
+          "supportText": "For any technical support of the portal funcionalities, Please contact on 011-23350020 ,011-23350025 or please drop the ticket in the portal.",
+          "supportSha256": "bc2eaea3eb5b51726ba8801ec9c24da71ae61ad3ddc38b18cb3989df43c69f2f"
+        },
+        "purpose": {
+          "claimId": "kg:contact-wpc:purpose",
+          "sourceVersionId": "india-official-web-97edcabf0e9b74ee-77501d767d",
+          "exactLocator": "technical support of the portal funcionalities",
+          "supportMode": "exact_text",
+          "supportText": "For any technical support of the portal funcionalities, Please contact on 011-23350020 ,011-23350025 or please drop the ticket in the portal.",
+          "supportSha256": "bc2eaea3eb5b51726ba8801ec9c24da71ae61ad3ddc38b18cb3989df43c69f2f"
+        }
+      }
+    },
+    {
+      "id": "agency-tec",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Telecommunication Engineering Centre",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "telecom.interface",
+        "op": "in",
+        "value": [
+          "ip",
+          "cellular",
+          "pstn",
+          "satellite",
+          "multiple"
+        ]
+      },
+      "payload": {
+        "authorityName": "Telecommunication Engineering Centre",
+        "role": "telecom"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Authority routing is retained, but no legal conclusion is exposed without an admitted current source.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-tec"
+    },
+    {
+      "id": "contact-tec",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Telecommunication Engineering Centre official contact",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "telecom.interface",
+        "op": "in",
+        "value": [
+          "ip",
+          "cellular",
+          "pstn",
+          "satellite",
+          "multiple"
+        ]
+      },
+      "payload": {
+        "authorityNodeId": "agency-tec",
+        "channel": "official_web",
+        "value": "https://www.mtcte.tec.gov.in/contact_us",
+        "purpose": "Telecommunication Engineering Centre verification"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The contact route was checked but could not pass field-level admission in this capture.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-tec"
+    },
+    {
+      "id": "agency-bis",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Bureau of Indian Standards",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityName": "Bureau of Indian Standards",
+        "role": "standards"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Authority routing is retained, but no legal conclusion is exposed without an admitted current source.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-bis"
+    },
+    {
+      "id": "contact-bis",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Bureau of Indian Standards official contact",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityNodeId": "agency-bis",
+        "channel": "official_web",
+        "value": "https://www.bis.gov.in/directory/enquiry/?lang=en",
+        "purpose": "Bureau of Indian Standards verification"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The contact route was checked but could not pass field-level admission in this capture.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-bis"
+    },
+    {
+      "id": "agency-cpcb",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Central Pollution Control Board",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityName": "Central Pollution Control Board",
+        "role": "environmental"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Authority routing is retained, but no legal conclusion is exposed without an admitted current source.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-cpcb"
+    },
+    {
+      "id": "contact-cpcb",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Central Pollution Control Board official contact",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityNodeId": "agency-cpcb",
+        "channel": "official_web",
+        "value": "https://cpcb.nic.in/",
+        "purpose": "Central Pollution Control Board verification"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The contact route was checked but could not pass field-level admission in this capture.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-cpcb"
+    },
+    {
+      "id": "agency-legal-metrology",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "Department of Consumer Affairs Legal Metrology",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityName": "Department of Consumer Affairs Legal Metrology",
+        "role": "consumer_protection"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Authority routing is retained, but no legal conclusion is exposed without an admitted current source.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-legal-metrology"
+    },
+    {
+      "id": "contact-legal-metrology",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Department of Consumer Affairs Legal Metrology official contact",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityNodeId": "agency-legal-metrology",
+        "channel": "official_web",
+        "value": "https://consumeraffairs.nic.in/organisation-and-units/division/legal-metrology",
+        "purpose": "Department of Consumer Affairs Legal Metrology verification"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The contact route was checked but could not pass field-level admission in this capture.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-legal-metrology"
+    },
+    {
+      "id": "statutory-itc-hs-schedule-1",
+      "kind": "statutory_entry",
+      "jurisdiction": "India",
+      "label": "ITC (HS), 2022 Schedule 1 – Import Policy",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "system": "ITC_HS",
+        "entryId": "ITC-HS-2022-SCHEDULE-1",
+        "officialLabel": "ITC (HS), 2022 Schedule 1 – Import Policy"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The entry is retained only as an authority-routing candidate until its current exact locator is admitted.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-dgft"
+    },
+    {
+      "id": "statutory-wpc-eta-license-exempt",
+      "kind": "statutory_entry",
+      "jurisdiction": "India",
+      "label": "Equipment Type Approval for licence-exempt wireless equipment",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "payload": {
+        "system": "WPC_ETA",
+        "entryId": "ETA-LICENSE-EXEMPT",
+        "officialLabel": "Equipment Type Approval for licence-exempt wireless equipment"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The entry is retained only as an authority-routing candidate until its current exact locator is admitted.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-wpc"
+    },
+    {
+      "id": "statutory-tec-mtcte-notified-equipment",
+      "kind": "statutory_entry",
+      "jurisdiction": "India",
+      "label": "Telecommunication equipment notified under MTCTE",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "telecom.interface",
+        "op": "in",
+        "value": [
+          "ip",
+          "cellular",
+          "pstn",
+          "satellite",
+          "multiple"
+        ]
+      },
+      "payload": {
+        "system": "TEC_MTCTE",
+        "entryId": "MTCTE-NOTIFIED-EQUIPMENT",
+        "officialLabel": "Telecommunication equipment notified under MTCTE"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The entry is retained only as an authority-routing candidate until its current exact locator is admitted.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-tec"
+    },
+    {
+      "id": "statutory-bis-crs-scheme-ii",
+      "kind": "statutory_entry",
+      "jurisdiction": "India",
+      "label": "Scheme II Compulsory Registration schedule",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "system": "BIS_CRS",
+        "entryId": "BIS-CRS-SCHEME-II",
+        "officialLabel": "Scheme II Compulsory Registration schedule"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "The entry is retained only as an authority-routing candidate until its current exact locator is admitted.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-bis"
+    },
+    {
+      "id": "filing-service-esanchit",
+      "kind": "filing_service",
+      "jurisdiction": "India",
+      "label": "e-SANCHIT",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "authorityNodeId": "agency-customs",
+        "officialServiceName": "e-SANCHIT",
+        "canonicalUrl": "https://www.icegate.gov.in/guidelines/esanchit-advisory",
+        "access": "login_required",
+        "filerRole": "importer",
+        "loginRequirement": "Confirm current ICEGATE registration and login requirements."
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Service and access metadata remain unadmitted.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-customs"
+    },
+    {
+      "id": "filing-service-wpc-eta",
+      "kind": "filing_service",
+      "jurisdiction": "India",
+      "label": "Equipment Type Approval (ETA)",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "payload": {
+        "authorityNodeId": "agency-wpc",
+        "officialServiceName": "Equipment Type Approval (ETA)",
+        "canonicalUrl": "https://www.eservices.dot.gov.in/equipment-type-approval-eta",
+        "access": "login_required",
+        "filerRole": "importer",
+        "loginRequirement": "Confirm current portal registration and login requirements."
+      },
+      "fieldEvidence": {
+        "officialServiceName": {
+          "claimId": "kg:filing-service-wpc-eta:officialServiceName",
+          "sourceVersionId": "india-official-web-d3924d2d505610ca-11dbdf0d36",
+          "exactLocator": "Equipment Type Approval (ETA)",
+          "supportMode": "exact_text",
+          "supportText": "Equipment Type Approval (ETA) is a certification issued by the Wireless Planning & Coordination (WPC) Wing of the Department of Telecommunications (DoT), Government of India.",
+          "supportSha256": "f349b609a4ad699bb20c19298c8240c769cd8f8d87c4d788854fe303a85f413f"
+        },
+        "canonicalUrl": {
+          "claimId": "kg:filing-service-wpc-eta:canonicalUrl",
+          "sourceVersionId": "india-official-web-d3924d2d505610ca-11dbdf0d36",
+          "exactLocator": "Equipment Type Approval (ETA)",
+          "supportMode": "exact_url",
+          "supportText": "Equipment Type Approval (ETA) is a certification issued by the Wireless Planning & Coordination (WPC) Wing of the Department of Telecommunications (DoT), Government of India.",
+          "supportSha256": "f349b609a4ad699bb20c19298c8240c769cd8f8d87c4d788854fe303a85f413f"
+        }
+      },
+      "pendingReason": "Service identity and source URL may be current, but access and filer-role metadata remain Pending.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-wpc"
+    },
+    {
+      "id": "filing-service-wpc-eta-process",
+      "kind": "filing_service",
+      "jurisdiction": "India",
+      "label": "Application Process",
+      "aliases": [],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "payload": {
+        "authorityNodeId": "agency-wpc",
+        "officialServiceName": "Application Process",
+        "canonicalUrl": "https://www.eservices.dot.gov.in/equipment-type-approval-eta",
+        "access": "login_required",
+        "filerRole": "importer",
+        "loginRequirement": "Confirm current portal registration and login requirements."
+      },
+      "fieldEvidence": {
+        "officialServiceName": {
+          "claimId": "kg:filing-service-wpc-eta-process:officialServiceName",
+          "sourceVersionId": "india-official-web-e5dafb6c61d5ad1b-17902ed50e",
+          "exactLocator": "Application Process",
+          "supportMode": "exact_text",
+          "supportText": "Application Process 1 Submit application saral sanchar portal",
+          "supportSha256": "8c4d9c3c7198b740ccba358317e38a17505dc7f78f0559d616b749819ce2ea05"
+        },
+        "canonicalUrl": {
+          "claimId": "kg:filing-service-wpc-eta-process:canonicalUrl",
+          "sourceVersionId": "india-official-web-e5dafb6c61d5ad1b-17902ed50e",
+          "exactLocator": "Application Process",
+          "supportMode": "exact_url",
+          "supportText": "Application Process 1 Submit application saral sanchar portal",
+          "supportSha256": "8c4d9c3c7198b740ccba358317e38a17505dc7f78f0559d616b749819ce2ea05"
+        }
+      },
+      "pendingReason": "The public application-process route is identified, but access and filer-role metadata remain Pending.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-wpc"
+    },
+    {
+      "id": "filing-service-saral-sanchar",
+      "kind": "filing_service",
+      "jurisdiction": "India",
+      "label": "saral sanchar portal",
+      "aliases": [
+        "License Issuance & Management (Saral Sanchar)"
+      ],
+      "state": "evidence_pending",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "payload": {
+        "authorityNodeId": "agency-wpc",
+        "officialServiceName": "License Issuance & Management (Saral Sanchar)",
+        "canonicalUrl": "https://saralsanchar.gov.in/LoginHome.php",
+        "access": "login_required",
+        "filerRole": "importer",
+        "loginRequirement": "Confirm current portal registration and login requirements."
+      },
+      "fieldEvidence": {
+        "officialServiceName": {
+          "claimId": "kg:filing-service-saral-sanchar:officialServiceName",
+          "sourceVersionId": "india-official-web-d3924d2d505610ca-1f430c6b92",
+          "exactLocator": "License Issuance & Management (Saral Sanchar)",
+          "supportMode": "exact_text",
+          "supportText": "License Issuance & Management (Saral Sanchar)",
+          "supportSha256": "fb13fd2957cfa2b68fb50a41e0cc11ed9372ef41be9bfb3fa96a7b630fd34357"
+        }
+      },
+      "pendingReason": "The visible portal identity is current, but its destination, access, and filer-role metadata remain Pending.",
+      "verificationOwner": "authority",
+      "contactNodeId": "contact-wpc"
+    },
+    {
+      "id": "gap-battery-epr",
+      "kind": "coverage_gap",
+      "jurisdiction": "India",
+      "label": "battery_epr evidence coverage",
+      "aliases": [],
+      "state": "coverage_pending",
+      "conditions": {
+        "characteristic": "battery.present",
+        "op": "present"
+      },
+      "payload": {
+        "domain": "battery_epr",
+        "authorityNodeId": "agency-cpcb"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Current official evidence was not admitted within this bounded capture.",
+      "verificationOwner": "Central Pollution Control Board",
+      "contactNodeId": "contact-cpcb"
+    },
+    {
+      "id": "gap-e-waste-epr",
+      "kind": "coverage_gap",
+      "jurisdiction": "India",
+      "label": "e_waste_epr evidence coverage",
+      "aliases": [],
+      "state": "coverage_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "domain": "e_waste_epr",
+        "authorityNodeId": "agency-cpcb"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Current official evidence was not admitted within this bounded capture.",
+      "verificationOwner": "Central Pollution Control Board",
+      "contactNodeId": "contact-cpcb"
+    },
+    {
+      "id": "gap-legal-metrology",
+      "kind": "coverage_gap",
+      "jurisdiction": "India",
+      "label": "legal_metrology evidence coverage",
+      "aliases": [],
+      "state": "coverage_pending",
+      "conditions": {
+        "characteristic": "packaging.retail_prepackaged",
+        "op": "present"
+      },
+      "payload": {
+        "domain": "legal_metrology",
+        "authorityNodeId": "agency-legal-metrology"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Current official evidence was not admitted within this bounded capture.",
+      "verificationOwner": "Department of Consumer Affairs",
+      "contactNodeId": "contact-legal-metrology"
+    },
+    {
+      "id": "gap-used-refurbished",
+      "kind": "coverage_gap",
+      "jurisdiction": "India",
+      "label": "used_refurbished evidence coverage",
+      "aliases": [],
+      "state": "coverage_pending",
+      "conditions": {
+        "characteristic": "product.condition",
+        "op": "in",
+        "value": [
+          "used",
+          "refurbished"
+        ]
+      },
+      "payload": {
+        "domain": "used_refurbished",
+        "authorityNodeId": "agency-dgft"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Current official evidence was not admitted within this bounded capture.",
+      "verificationOwner": "Directorate General of Foreign Trade",
+      "contactNodeId": "contact-dgft"
+    },
+    {
+      "id": "gap-unmapped-electronics",
+      "kind": "coverage_gap",
+      "jurisdiction": "India",
+      "label": "unmapped_electronics evidence coverage",
+      "aliases": [],
+      "state": "coverage_pending",
+      "conditions": {
+        "all": []
+      },
+      "payload": {
+        "domain": "unmapped_electronics",
+        "authorityNodeId": "agency-dgft"
+      },
+      "fieldEvidence": {},
+      "pendingReason": "Current official evidence was not admitted within this bounded capture.",
+      "verificationOwner": "Directorate General of Foreign Trade",
+      "contactNodeId": "contact-dgft"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wpc-application-filed-at-saral-sanchar",
+      "from": "filing-service-wpc-eta-process",
+      "relation": "filed_at",
+      "to": "filing-service-saral-sanchar",
+      "conditions": {
+        "characteristic": "radio.transmitter_present",
+        "op": "present"
+      },
+      "evidence": {
+        "claimId": "kg-edge:edge-wpc-application-filed-at-saral-sanchar",
+        "sourceVersionId": "india-official-web-e5dafb6c61d5ad1b-17902ed50e",
+        "exactLocator": "Application Process",
+        "supportMode": "exact_text",
+        "supportText": "Application Process 1 Submit application saral sanchar portal",
+        "supportSha256": "8c4d9c3c7198b740ccba358317e38a17505dc7f78f0559d616b749819ce2ea05"
+      }
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "graphId": "china-india-electronics-v1",
+  "admissions": [
+    {
+      "evidence": {
+        "admissionId": "admission-fixture-dot",
+        "applicability": {
+          "appliesIn": "India",
+          "tradeDirection": "china_to_india",
+          "productScope": "electronics with confirmed radio characteristics",
+          "regulatoryDomain": "telecommunications"
+        },
+        "applicabilityEvidence": {
+          "locator": { "kind": "paragraph", "value": "Fixture paragraph 1" },
+          "exactExcerpt": "India Telecommunications Authority is the telecom authority."
+        },
+        "authorityName": "India Telecommunications Authority",
+        "connectorId": "india-official-web",
+        "contentType": "text/html",
+        "documentVersionId": "india-official-web-d46dd195a281b8ed",
+        "effectiveFrom": "2026-08-01",
+        "exactLocator": { "kind": "paragraph", "value": "Fixture paragraph 1" },
+        "finalUrl": "https://dot.gov.in/fixture",
+        "freshUntil": "2027-08-01",
+        "instrumentId": "fixture-radio-rule",
+        "instrumentTitle": "Fixture Radio Rule",
+        "identityEvidence": {
+          "authority": {
+            "locator": { "kind": "paragraph", "value": "Fixture paragraph 1" },
+            "exactExcerpt": "India Telecommunications Authority"
+          },
+          "instrumentId": {
+            "locator": { "kind": "paragraph", "value": "Fixture paragraph 1" },
+            "exactExcerpt": "Radio Authorization"
+          },
+          "instrumentTitle": {
+            "locator": { "kind": "paragraph", "value": "Fixture paragraph 1" },
+            "exactExcerpt": "Radio Authorization"
+          }
+        },
+        "jurisdiction": "India",
+        "originalLanguage": "en",
+        "promptInjectionDetected": false,
+        "redirectHistory": ["https://dot.gov.in/fixture"],
+        "sha256": "d46dd195a281b8ed403d1a6befc5ff123b8e5df097500ab1a0320c24684515d5",
+        "snapshotRelativePath": "snapshot.html",
+        "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+        "state": "admitted",
+        "translation": {
+          "status": "authoritative_original",
+          "method": "official English source",
+          "materialAmbiguity": false
+        },
+        "transitions": [
+          { "at": "2026-08-01T00:00:00.000Z", "state": "discovered" },
+          { "at": "2026-08-01T00:00:01.000Z", "state": "snapshotted" },
+          { "at": "2026-08-01T00:00:02.000Z", "state": "extracted" },
+          { "at": "2026-08-01T00:00:03.000Z", "state": "validated" },
+          { "at": "2026-08-01T00:00:04.000Z", "state": "admitted" }
+        ]
+      },
+      "amendment": { "status": "original", "note": "Original fixture instrument" },
+      "exactExcerpt": "India Telecommunications Authority is the telecom authority. Importer shall obtain Radio Authorization before shipment. Radio Authorization requires Technical Certificate. Importer shall obtain High Band Radio Authorization before shipment. High Band Radio Authorization requires Technical Certificate. Technical Certificate is a certificate issued by the supplier and accepted as PDF. WPC is Wireless Planning and Coordination. WPC Equipment Type Approval entry ETA. India Filing Service is publicly accessible at https://dot.gov.in/service for the importer to file; no login required. Use https://dot.gov.in/contact for electronics verification."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "characteristic:radio.transmitter_present",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "Radio transmitter present",
+      "aliases": ["wireless transmitter"],
+      "state": "actionable",
+      "conditions": { "all": [] },
+      "payload": { "characteristicId": "radio.transmitter_present" },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "characteristic:radio.frequency_hz",
+      "kind": "characteristic",
+      "jurisdiction": "India",
+      "label": "Radio frequency",
+      "aliases": ["frequency threshold"],
+      "state": "actionable",
+      "conditions": { "all": [] },
+      "payload": { "characteristicId": "radio.frequency_hz" },
+      "fieldEvidence": {}
+    },
+    {
+      "id": "agency:telecommunications",
+      "kind": "agency",
+      "jurisdiction": "India",
+      "label": "India Telecommunications Authority",
+      "aliases": ["telecom authority"],
+      "state": "actionable",
+      "conditions": { "all": [] },
+      "payload": { "authorityName": "India Telecommunications Authority", "role": "telecom" },
+      "fieldEvidence": {
+        "authorityName": {
+          "claimId": "kg:agency:telecommunications:authorityName",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "India Telecommunications Authority is the telecom authority.",
+          "supportSha256": "46231d4427081205d1100214d3cd9c90529268b08f59eb0284d9961e23f0c49f"
+        },
+        "role": {
+          "claimId": "kg:agency:telecommunications:role",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "India Telecommunications Authority is the telecom authority.",
+          "supportSha256": "46231d4427081205d1100214d3cd9c90529268b08f59eb0284d9961e23f0c49f"
+        }
+      }
+    },
+    {
+      "id": "contact:telecommunications",
+      "kind": "contact",
+      "jurisdiction": "India",
+      "label": "Electronics verification contact",
+      "aliases": ["official contact"],
+      "state": "actionable",
+      "conditions": { "all": [] },
+      "payload": {
+        "authorityNodeId": "agency:telecommunications",
+        "channel": "official_web",
+        "value": "https://dot.gov.in/contact",
+        "purpose": "electronics verification"
+      },
+      "fieldEvidence": {
+        "value": {
+          "claimId": "kg:contact:telecommunications:value",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_url",
+          "supportText": "https://dot.gov.in/contact",
+          "supportSha256": "a07af2885e1a98a29b62902230b6250f7fbf2c159f4818956c821f546bb31fc3"
+        },
+        "purpose": {
+          "claimId": "kg:contact:telecommunications:purpose",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "electronics verification",
+          "supportSha256": "21b3c627de7b558309286a439c6595a9f954f7d1d88ba395b8f155573e0a946e"
+        }
+      }
+    },
+    {
+      "id": "filing:india-service",
+      "kind": "filing_service",
+      "jurisdiction": "India",
+      "label": "India Filing Service",
+      "aliases": ["official filing service"],
+      "state": "actionable",
+      "conditions": { "all": [] },
+      "payload": {
+        "authorityNodeId": "agency:telecommunications",
+        "officialServiceName": "India Filing Service",
+        "canonicalUrl": "https://dot.gov.in/service",
+        "access": "public",
+        "filerRole": "importer",
+        "loginRequirement": "no login required"
+      },
+      "fieldEvidence": {
+        "officialServiceName": {
+          "claimId": "kg:filing:india-service:officialServiceName",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "India Filing Service",
+          "supportSha256": "736fa65a179d91b62612b983d73b7c2641bdf918785b22bf90d28c4912a94d59"
+        },
+        "canonicalUrl": {
+          "claimId": "kg:filing:india-service:canonicalUrl",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_url",
+          "supportText": "https://dot.gov.in/service",
+          "supportSha256": "b706095eb0db6c82036f39664c37ec0f53dd69666b10044640ce599267abc3db"
+        },
+        "access": {
+          "claimId": "kg:filing:india-service:access",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "publicly accessible",
+          "supportSha256": "ddae00be60dab2d18bb731e249dc368238a11cbc21ea2d3f3bc31167077133bf"
+        },
+        "filerRole": {
+          "claimId": "kg:filing:india-service:filerRole",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "importer",
+          "supportSha256": "2c98ae936632f83b63bb0c981dfc193cfa9cd476868b2caf16896333ec1968f7"
+        },
+        "loginRequirement": {
+          "claimId": "kg:filing:india-service:loginRequirement",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "no login required",
+          "supportSha256": "40159bdf26431cbab6eab6d103d74eb07c7c4d5c6bd8b6b6db84cefdba2409ce"
+        }
+      }
+    },
+    {
+      "id": "document:technical-certificate",
+      "kind": "document",
+      "jurisdiction": "India",
+      "label": "Technical Certificate",
+      "aliases": ["technical approval certificate"],
+      "state": "actionable",
+      "conditions": { "all": [] },
+      "payload": {
+        "documentCode": "TECH-CERT",
+        "documentKind": "certificate",
+        "officialName": "Technical Certificate",
+        "issuerRole": "supplier",
+        "acceptedForm": ["PDF"]
+      },
+      "fieldEvidence": {
+        "documentKind": {
+          "claimId": "kg:document:technical-certificate:documentKind",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Technical Certificate is a certificate issued by the supplier and accepted as PDF.",
+          "supportSha256": "2ed0d8d48a839dbb751fbe3f24a1efcc079664e10367ca0d9d416e267fe92e0a"
+        },
+        "officialName": {
+          "claimId": "kg:document:technical-certificate:officialName",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "Technical Certificate is a certificate issued by the supplier and accepted as PDF.",
+          "supportSha256": "2ed0d8d48a839dbb751fbe3f24a1efcc079664e10367ca0d9d416e267fe92e0a"
+        },
+        "issuerRole": {
+          "claimId": "kg:document:technical-certificate:issuerRole",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Technical Certificate is a certificate issued by the supplier and accepted as PDF.",
+          "supportSha256": "2ed0d8d48a839dbb751fbe3f24a1efcc079664e10367ca0d9d416e267fe92e0a"
+        },
+        "acceptedForm": {
+          "claimId": "kg:document:technical-certificate:acceptedForm",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "Technical Certificate is a certificate issued by the supplier and accepted as PDF.",
+          "supportSha256": "2ed0d8d48a839dbb751fbe3f24a1efcc079664e10367ca0d9d416e267fe92e0a"
+        }
+      }
+    },
+    {
+      "id": "requirement:radio-authorization",
+      "kind": "requirement",
+      "jurisdiction": "India",
+      "label": "Radio Authorization",
+      "aliases": ["wireless authorization"],
+      "state": "actionable",
+      "conditions": { "characteristic": "radio.transmitter_present", "op": "present" },
+      "payload": {
+        "actionCode": "obtain",
+        "targetNodeId": "document:technical-certificate",
+        "ownerRole": "importer",
+        "dueStage": "before_shipment",
+        "satisfaction": { "kind": "verified_document", "targetNodeId": "document:technical-certificate" }
+      },
+      "fieldEvidence": {
+        "actionCode": {
+          "claimId": "kg:requirement:radio-authorization:actionCode",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Importer shall obtain Radio Authorization before shipment.",
+          "supportSha256": "ccba5d82053b481fe87e34f319f49f69aba9cdf7f905d7a83d5ce1c6e861ec25"
+        },
+        "ownerRole": {
+          "claimId": "kg:requirement:radio-authorization:ownerRole",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Importer shall obtain Radio Authorization before shipment.",
+          "supportSha256": "ccba5d82053b481fe87e34f319f49f69aba9cdf7f905d7a83d5ce1c6e861ec25"
+        },
+        "dueStage": {
+          "claimId": "kg:requirement:radio-authorization:dueStage",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Importer shall obtain Radio Authorization before shipment.",
+          "supportSha256": "ccba5d82053b481fe87e34f319f49f69aba9cdf7f905d7a83d5ce1c6e861ec25"
+        }
+      }
+    },
+    {
+      "id": "requirement:high-band-radio-authorization",
+      "kind": "requirement",
+      "jurisdiction": "India",
+      "label": "High Band Radio Authorization",
+      "aliases": ["frequency threshold authorization"],
+      "state": "actionable",
+      "conditions": { "characteristic": "radio.frequency_hz", "op": "gte", "value": 2400000000, "unit": "hz" },
+      "payload": {
+        "actionCode": "obtain",
+        "targetNodeId": "document:technical-certificate",
+        "ownerRole": "importer",
+        "dueStage": "before_shipment",
+        "satisfaction": { "kind": "verified_document", "targetNodeId": "document:technical-certificate" }
+      },
+      "fieldEvidence": {
+        "actionCode": {
+          "claimId": "kg:requirement:high-band-radio-authorization:actionCode",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Importer shall obtain High Band Radio Authorization before shipment.",
+          "supportSha256": "6d7d2419a1f856c0e188cedd88e1500bd4ad84eb004e613f770d8e1bfa9776c2"
+        },
+        "ownerRole": {
+          "claimId": "kg:requirement:high-band-radio-authorization:ownerRole",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Importer shall obtain High Band Radio Authorization before shipment.",
+          "supportSha256": "6d7d2419a1f856c0e188cedd88e1500bd4ad84eb004e613f770d8e1bfa9776c2"
+        },
+        "dueStage": {
+          "claimId": "kg:requirement:high-band-radio-authorization:dueStage",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "Importer shall obtain High Band Radio Authorization before shipment.",
+          "supportSha256": "6d7d2419a1f856c0e188cedd88e1500bd4ad84eb004e613f770d8e1bfa9776c2"
+        }
+      }
+    },
+    {
+      "id": "statutory:wpc-eta",
+      "kind": "statutory_entry",
+      "jurisdiction": "India",
+      "label": "WPC Equipment Type Approval",
+      "aliases": ["WPC ETA"],
+      "state": "actionable",
+      "conditions": { "characteristic": "radio.transmitter_present", "op": "present" },
+      "payload": { "system": "WPC_ETA", "entryId": "ETA", "officialLabel": "WPC Equipment Type Approval" },
+      "fieldEvidence": {
+        "system": {
+          "claimId": "kg:statutory:wpc-eta:system",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "closed_enum",
+          "supportText": "WPC Equipment Type Approval entry ETA.",
+          "supportSha256": "f5ce5c0b5d92eaf3803f3426373d0749d7ba408d88c625aa5a7e96dbd90e7e58"
+        },
+        "entryId": {
+          "claimId": "kg:statutory:wpc-eta:entryId",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "WPC Equipment Type Approval entry ETA.",
+          "supportSha256": "f5ce5c0b5d92eaf3803f3426373d0749d7ba408d88c625aa5a7e96dbd90e7e58"
+        },
+        "officialLabel": {
+          "claimId": "kg:statutory:wpc-eta:officialLabel",
+          "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+          "exactLocator": "Fixture paragraph 1",
+          "supportMode": "exact_text",
+          "supportText": "WPC Equipment Type Approval entry ETA.",
+          "supportSha256": "f5ce5c0b5d92eaf3803f3426373d0749d7ba408d88c625aa5a7e96dbd90e7e58"
+        }
+      }
+    },
+    {
+      "id": "gap:battery-epr",
+      "kind": "coverage_gap",
+      "jurisdiction": "India",
+      "label": "Battery EPR coverage",
+      "aliases": ["battery environmental coverage"],
+      "state": "coverage_pending",
+      "conditions": { "characteristic": "battery.present", "op": "present" },
+      "payload": { "domain": "battery_epr", "authorityNodeId": "agency:telecommunications" },
+      "fieldEvidence": {},
+      "pendingReason": "Official battery evidence is not admitted in this fixture.",
+      "verificationOwner": "India Telecommunications Authority",
+      "contactNodeId": "contact:telecommunications"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:radio-requires-certificate",
+      "from": "requirement:radio-authorization",
+      "relation": "requires",
+      "to": "document:technical-certificate",
+      "conditions": { "characteristic": "radio.transmitter_present", "op": "present" },
+      "evidence": {
+        "claimId": "kg-edge:edge:radio-requires-certificate",
+        "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+        "exactLocator": "Fixture paragraph 1",
+        "supportMode": "exact_text",
+        "supportText": "Radio Authorization requires Technical Certificate.",
+        "supportSha256": "3f8d9fc3d9ecc17ce197d7a3290e7d75ba7dd88a8336ca40aa5b5f0903ab3f2a"
+      }
+    },
+    {
+      "id": "edge:high-band-requires-certificate",
+      "from": "requirement:high-band-radio-authorization",
+      "relation": "requires",
+      "to": "document:technical-certificate",
+      "conditions": { "characteristic": "radio.frequency_hz", "op": "gte", "value": 2400000000, "unit": "hz" },
+      "evidence": {
+        "claimId": "kg-edge:edge:high-band-requires-certificate",
+        "sourceVersionId": "india-official-web-d46dd195a281b8ed-edbd3c20dc",
+        "exactLocator": "Fixture paragraph 1",
+        "supportMode": "exact_text",
+        "supportText": "High Band Radio Authorization requires Technical Certificate.",
+        "supportSha256": "2e371990eb2c0735d03abc5637183783c2d85436704c21dce73397f238f432ef"
+      }
+    }
+  ]
+}
